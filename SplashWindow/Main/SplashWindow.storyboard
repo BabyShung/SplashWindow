@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Options View Controller-->
+        <scene sceneID="Jh0-Fa-uf0">
+            <objects>
+                <viewController storyboardIdentifier="OptionsViewController" id="ubB-of-Gu5" customClass="OptionsViewController" customModule="Planhola" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="byX-Pm-OZq"/>
+                        <viewControllerLayoutGuide type="bottom" id="oeQ-jT-kQU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Te-TD-noo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ3-88-cmn" customClass="ShadowButton" customModule="Planhola" customModuleProvider="target">
+                                <rect key="frame" x="222.5" y="279" width="110" height="110"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="logout">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didClickLogoutBtn:" destination="ubB-of-Gu5" eventType="touchUpInside" id="Vzc-aH-7CX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPy-g1-sYa" customClass="ShadowButton" customModule="Planhola" customModuleProvider="target">
+                                <rect key="frame" x="42.5" y="279" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iPy-g1-sYa" secondAttribute="height" multiplier="1:1" id="4Z0-Rw-GS9"/>
+                                    <constraint firstAttribute="width" constant="110" id="a6l-Hp-fHg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="Touch">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didClickTouchIDBtn:" destination="ubB-of-Gu5" eventType="touchUpInside" id="fgA-GC-Vof"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iPy-g1-sYa" firstAttribute="trailing" secondItem="8Te-TD-noo" secondAttribute="centerXWithinMargins" constant="-35" id="0i1-yf-Vgf"/>
+                            <constraint firstItem="dZ3-88-cmn" firstAttribute="width" secondItem="iPy-g1-sYa" secondAttribute="width" id="CsC-AT-p7O"/>
+                            <constraint firstItem="dZ3-88-cmn" firstAttribute="height" secondItem="iPy-g1-sYa" secondAttribute="height" id="Hmz-CV-Xw9"/>
+                            <constraint firstItem="dZ3-88-cmn" firstAttribute="leading" secondItem="8Te-TD-noo" secondAttribute="centerXWithinMargins" constant="35" id="J8M-hJ-iGs"/>
+                            <constraint firstItem="dZ3-88-cmn" firstAttribute="centerY" secondItem="iPy-g1-sYa" secondAttribute="centerY" id="k4a-P2-d8v"/>
+                            <constraint firstItem="iPy-g1-sYa" firstAttribute="centerY" secondItem="8Te-TD-noo" secondAttribute="centerY" id="tuI-05-yjI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoutBtn" destination="dZ3-88-cmn" id="eua-4l-scc"/>
+                        <outlet property="touchIDBtn" destination="iPy-g1-sYa" id="rKS-0X-4dU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kz1-fn-ezd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="-79.610194902548727"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Touch" width="58" height="58"/>
+        <image name="logout" width="60" height="60"/>
+    </resources>
+</document>

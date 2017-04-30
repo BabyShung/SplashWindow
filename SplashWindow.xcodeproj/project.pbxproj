@@ -10,6 +10,19 @@
 		415E56741EB589C900BD2D5B /* SplashWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415E566A1EB589C900BD2D5B /* SplashWindow.framework */; };
 		415E56791EB589C900BD2D5B /* SplashWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56781EB589C900BD2D5B /* SplashWindowTests.swift */; };
 		415E567B1EB589C900BD2D5B /* SplashWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 415E566D1EB589C900BD2D5B /* SplashWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		415E568D1EB58A2C00BD2D5B /* AuthSettings.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415E568C1EB58A2C00BD2D5B /* AuthSettings.xcassets */; };
+		415E56AE1EB58AFD00BD2D5B /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E569F1EB58AFC00BD2D5B /* NSAttributedStringExtension.swift */; };
+		415E56AF1EB58AFD00BD2D5B /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A01EB58AFC00BD2D5B /* SwiftyUserDefaults.swift */; };
+		415E56B01EB58AFD00BD2D5B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A11EB58AFC00BD2D5B /* UIButtonExtension.swift */; };
+		415E56B11EB58AFD00BD2D5B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A21EB58AFC00BD2D5B /* UIColorExtension.swift */; };
+		415E56B21EB58AFD00BD2D5B /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A31EB58AFD00BD2D5B /* UIStoryboardExtension.swift */; };
+		415E56B31EB58AFD00BD2D5B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A41EB58AFD00BD2D5B /* UIViewExtension.swift */; };
+		415E56B41EB58AFD00BD2D5B /* AppAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A61EB58AFD00BD2D5B /* AppAuthentication.swift */; };
+		415E56B51EB58AFD00BD2D5B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A71EB58AFD00BD2D5B /* OptionsViewController.swift */; };
+		415E56B61EB58AFD00BD2D5B /* SplashWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415E56A81EB58AFD00BD2D5B /* SplashWindow.storyboard */; };
+		415E56B71EB58AFD00BD2D5B /* SplashWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A91EB58AFD00BD2D5B /* SplashWindow.swift */; };
+		415E56B81EB58AFD00BD2D5B /* AuthStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */; };
+		415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +42,19 @@
 		415E56731EB589C900BD2D5B /* SplashWindowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplashWindowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		415E56781EB589C900BD2D5B /* SplashWindowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWindowTests.swift; sourceTree = "<group>"; };
 		415E567A1EB589C900BD2D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		415E568C1EB58A2C00BD2D5B /* AuthSettings.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AuthSettings.xcassets; sourceTree = "<group>"; };
+		415E569F1EB58AFC00BD2D5B /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
+		415E56A01EB58AFC00BD2D5B /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
+		415E56A11EB58AFC00BD2D5B /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		415E56A21EB58AFC00BD2D5B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		415E56A31EB58AFD00BD2D5B /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		415E56A41EB58AFD00BD2D5B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		415E56A61EB58AFD00BD2D5B /* AppAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAuthentication.swift; sourceTree = "<group>"; };
+		415E56A71EB58AFD00BD2D5B /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		415E56A81EB58AFD00BD2D5B /* SplashWindow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashWindow.storyboard; sourceTree = "<group>"; };
+		415E56A91EB58AFD00BD2D5B /* SplashWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashWindow.swift; sourceTree = "<group>"; };
+		415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStrings.swift; sourceTree = "<group>"; };
+		415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +97,11 @@
 		415E566C1EB589C900BD2D5B /* SplashWindow */ = {
 			isa = PBXGroup;
 			children = (
+				415E56A51EB58AFD00BD2D5B /* Main */,
+				415E569E1EB58AFC00BD2D5B /* Extensions */,
+				415E56AA1EB58AFD00BD2D5B /* Strings */,
+				415E56AC1EB58AFD00BD2D5B /* Utils */,
+				415E568C1EB58A2C00BD2D5B /* AuthSettings.xcassets */,
 				415E566D1EB589C900BD2D5B /* SplashWindow.h */,
 				415E566E1EB589C900BD2D5B /* Info.plist */,
 			);
@@ -84,6 +115,46 @@
 				415E567A1EB589C900BD2D5B /* Info.plist */,
 			);
 			path = SplashWindowTests;
+			sourceTree = "<group>";
+		};
+		415E569E1EB58AFC00BD2D5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				415E569F1EB58AFC00BD2D5B /* NSAttributedStringExtension.swift */,
+				415E56A01EB58AFC00BD2D5B /* SwiftyUserDefaults.swift */,
+				415E56A11EB58AFC00BD2D5B /* UIButtonExtension.swift */,
+				415E56A21EB58AFC00BD2D5B /* UIColorExtension.swift */,
+				415E56A31EB58AFD00BD2D5B /* UIStoryboardExtension.swift */,
+				415E56A41EB58AFD00BD2D5B /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		415E56A51EB58AFD00BD2D5B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				415E56A91EB58AFD00BD2D5B /* SplashWindow.swift */,
+				415E56A81EB58AFD00BD2D5B /* SplashWindow.storyboard */,
+				415E56A61EB58AFD00BD2D5B /* AppAuthentication.swift */,
+				415E56A71EB58AFD00BD2D5B /* OptionsViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		415E56AA1EB58AFD00BD2D5B /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		415E56AC1EB58AFD00BD2D5B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +220,7 @@
 					415E56691EB589C900BD2D5B = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 4B6J56772J;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					415E56721EB589C900BD2D5B = {
@@ -181,6 +253,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415E568D1EB58A2C00BD2D5B /* AuthSettings.xcassets in Resources */,
+				415E56B61EB58AFD00BD2D5B /* SplashWindow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +272,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415E56B71EB58AFD00BD2D5B /* SplashWindow.swift in Sources */,
+				415E56B31EB58AFD00BD2D5B /* UIViewExtension.swift in Sources */,
+				415E56B81EB58AFD00BD2D5B /* AuthStrings.swift in Sources */,
+				415E56B51EB58AFD00BD2D5B /* OptionsViewController.swift in Sources */,
+				415E56B41EB58AFD00BD2D5B /* AppAuthentication.swift in Sources */,
+				415E56AF1EB58AFD00BD2D5B /* SwiftyUserDefaults.swift in Sources */,
+				415E56AE1EB58AFD00BD2D5B /* NSAttributedStringExtension.swift in Sources */,
+				415E56B21EB58AFD00BD2D5B /* UIStoryboardExtension.swift in Sources */,
+				415E56B01EB58AFD00BD2D5B /* UIButtonExtension.swift in Sources */,
+				415E56B11EB58AFD00BD2D5B /* UIColorExtension.swift in Sources */,
+				415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +409,7 @@
 		415E567F1EB589C900BD2D5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4B6J56772J;
@@ -336,6 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Planhola.SplashWindow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +430,7 @@
 		415E56801EB589C900BD2D5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4B6J56772J;
@@ -362,6 +450,7 @@
 		415E56821EB589C900BD2D5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4B6J56772J;
 				INFOPLIST_FILE = SplashWindowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +463,7 @@
 		415E56831EB589C900BD2D5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4B6J56772J;
 				INFOPLIST_FILE = SplashWindowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
