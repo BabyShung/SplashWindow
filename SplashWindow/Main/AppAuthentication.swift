@@ -8,7 +8,7 @@ public class AppAuthentication {
     //MARK: static vars
     public static let storage: Storage = UserDefaults.standard
     
-    public static var passcodeOrTouchIDEnabled: Bool {
+    public static var authEnabled: Bool {
         return passcodeEnabled || touchIDEnabled
     }
     

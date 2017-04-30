@@ -10,17 +10,19 @@ public class SplashWindow: UIWindow {
     
     //private
     fileprivate unowned var protectedWindow: UIWindow
-    fileprivate var success: (PasscodeTouchIDAuth) -> ()
-    fileprivate var logout: () -> () = { _ in }
+    fileprivate var success: (AuthType) -> ()
+    fileprivate var logout: () -> (UIViewController?) = { _ in return nil }
     fileprivate var initialVC: UIViewController?
     fileprivate var authenticateFromTouchID = false
-    fileprivate var didEnterBackground: Bool = true
+    fileprivate var didEnterBackground: Bool = true //assume first launch is in bg
+    
     lazy fileprivate var transition: CATransition = {
         let transition = CATransition()
         transition.duration = 0.2
         transition.type = kCATransitionFade
         return transition
     } ()
+    
     lazy fileprivate var optionVC: OptionsViewController = {
         
         let sb = UIStoryboard(name: String(describing: SplashWindow.self), bundle: Bundle(identifier: "com.Planhola.SplashWindow"))
@@ -39,8 +41,8 @@ public class SplashWindow: UIWindow {
      */
     public convenience init(window: UIWindow,
                      launchXibName: String,
-                     success: @escaping (PasscodeTouchIDAuth) -> (),
-                     logout: @escaping () -> ()) {
+                     success: @escaping (AuthType) -> (),
+                     logout: @escaping () -> (UIViewController?)) {
         let dummyVC = UIViewController()
         dummyVC.view.isHidden = true
         self.init(window: window,
@@ -53,8 +55,8 @@ public class SplashWindow: UIWindow {
     
     public init(window: UIWindow,
          launchViewController: UIViewController,
-         success: @escaping (PasscodeTouchIDAuth) -> (),
-         logout: @escaping () -> ()) {
+         success: @escaping (AuthType) -> (),
+         logout: @escaping () -> (UIViewController?)) {
         self.protectedWindow = window
         self.success = success
         self.logout = logout
@@ -74,15 +76,15 @@ public extension SplashWindow {
     
     func authenticateUser(initialVC: UIViewController? = nil) {
         
-        guard !isAuthenticating else {
-            return
-        }
+        guard !isAuthenticating else { return }
+        
         guard !authenticateFromTouchID else {
             authenticateFromTouchID = false
             return
         }
+        
         if let initialVC = self.initialVC {
-            protectedWindow.transitionRootTo(initialVC) { _ in
+            protectedWindow.transitionRootTo(initialVC) { [unowned self] _ in
                 self.showSelf(show: false, animated: true)
             }
             self.initialVC = nil
@@ -125,14 +127,14 @@ public extension SplashWindow {
 extension SplashWindow {
     
     fileprivate func showPasscodeTouchIDIfNeeded() -> Bool {
-        let shouldVerify = AppAuthentication.passcodeOrTouchIDEnabled
+        guard AppAuthentication.authEnabled else { return false }
         showSelf(show: true, animated: false)
         isAuthenticating = true
         AppAuthentication.touchIDEnabled ? showTouchID() : showOptionView()
-        return shouldVerify
+        return true
     }
     
-    fileprivate func authenticationSucceeded(type: PasscodeTouchIDAuth) {
+    fileprivate func authenticationSucceeded(type: AuthType) {
         isAuthenticating = false
         
         /*
@@ -143,7 +145,7 @@ extension SplashWindow {
         App.delegate.applicationDidBecomeActive?(App.shared)
         
         switch type {
-        case .touchIDAuth:
+        case .touchID:
             authenticateFromTouchID = true
         default:
             break
@@ -154,7 +156,7 @@ extension SplashWindow {
     fileprivate func showTouchID() {
         AppAuthentication.authenticateUser { [unowned self] (success, error) in
             if success {
-                self.authenticationSucceeded(type: .touchIDAuth)
+                self.authenticationSucceeded(type: .touchID)
                 return
             }
             guard let error = error else { return }
@@ -176,15 +178,23 @@ extension SplashWindow {
         self.initialVC = nil
         
         AppAuthentication.storage.removeAllInfo()
-        self.showSelf(show: false, animated: true, animations: { _ in }) { [unowned self] _ in
-            self.rootViewController?.dismiss(animated: false, completion: nil)
+
+        //if we have a logout closure
+        if let loginVC = self.logout() {
+            //transition to loginVC
+            protectedWindow.transitionRootTo(loginVC) { [unowned self] _ in
+                //hide splash window
+                self.showSelf(show: false, animated: true, animations: { _ in }) { [unowned self] _ in
+                    //dismiss optionVC
+                    self.rootViewController?.dismiss(animated: false, completion: nil)
+                }
+            }
         }
     }
     
     fileprivate func showOptionView() {
         
         optionVC.didClicklogout = { [unowned self] in
-            self.logout()
             self.cleanup()
         }
         optionVC.didClickTouchID = { [unowned self] _ in
@@ -197,9 +207,9 @@ extension SplashWindow {
     }
 }
 
-public enum PasscodeTouchIDAuth: Int {
-    case passcodeAuth
-    case touchIDAuth
+public enum AuthType: Int {
+    case passcode
+    case touchID
 }
 
 public extension UIWindow {
