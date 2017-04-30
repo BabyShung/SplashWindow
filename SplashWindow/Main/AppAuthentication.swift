@@ -3,25 +3,25 @@ import Foundation
 import LocalAuthentication
 import UIKit
 
-class AppAuthentication {
+public class AppAuthentication {
     
     //MARK: static vars
-    static let storage: Storage = UserDefaults.standard
+    public static let storage: Storage = UserDefaults.standard
     
-    static var passcodeOrTouchIDEnabled: Bool {
+    public static var passcodeOrTouchIDEnabled: Bool {
         return passcodeEnabled || touchIDEnabled
     }
     
-    static var passcodeEnabled: Bool {
+    public static var passcodeEnabled: Bool {
         //fix this if you set your own passcodeView
         return false //storage.passcodeEnabled()
     }
     
-    static var touchIDEnabledOnDevice: Bool {
+    public static var touchIDEnabledOnDevice: Bool {
         return LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil)
     }
     
-    static var touchIDEnabled: Bool {
+    public static var touchIDEnabled: Bool {
         let deviceTouchIDEnabled = self.touchIDEnabledOnDevice
         guard deviceTouchIDEnabled else { return false }
         
@@ -33,16 +33,16 @@ class AppAuthentication {
     }
     
     //MARK: Setters
-    class func setPasscode(passcode: String) {
+    public class func setPasscode(passcode: String) {
         storage.setPasscode(passcode)
     }
     
-    class func setTouchID(enabled: Bool) {
+    public class func setTouchID(enabled: Bool) {
         storage.setTouchID(enabled)
     }
     
     //MARK: authenticate
-    class func authenticateUser(handler: @escaping (Bool, NSError?) -> ()) {
+    public class func authenticateUser(handler: @escaping (Bool, NSError?) -> ()) {
         let context = LAContext()
         var error: NSError?
         guard context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
@@ -64,7 +64,7 @@ class AppAuthentication {
 /*
  Lower level of AppAuthentication
  */
-protocol Storage {
+public protocol Storage {
     func passcodeEnabled() -> Bool
     func setPasscode(_ passcode: String)
     func touchIDEnabled() -> Bool
@@ -75,28 +75,28 @@ protocol Storage {
 
 extension UserDefaults: Storage {
     
-    func passcodeEnabled() -> Bool {
+    public func passcodeEnabled() -> Bool {
         return Defaults[.passcode] != nil
     }
     
-    func setPasscode(_ passcode: String) {
+    public func setPasscode(_ passcode: String) {
         Defaults[.passcode] = passcode
     }
     
-    func touchIDEnabled() -> Bool {
+    public func touchIDEnabled() -> Bool {
         guard let enabled = getTouchIDEnabled() else { return false }
         return enabled
     }
     
-    func getTouchIDEnabled() -> Bool? {
+    public func getTouchIDEnabled() -> Bool? {
         return Defaults[.touchIDEnabled]
     }
     
-    func setTouchID(_ enable: Bool) {
+    public func setTouchID(_ enable: Bool) {
         Defaults[.touchIDEnabled] = enable
     }
     
-    func removeAllInfo() {
+    public func removeAllInfo() {
         Defaults[.touchIDEnabled] = nil
         Defaults[.passcode] = nil
     }

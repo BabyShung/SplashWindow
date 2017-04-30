@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410E789F1EB58F9C0038953B /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E789D1EB58F9C0038953B /* ShadowButton.swift */; };
+		410E78A01EB58F9C0038953B /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E789E1EB58F9C0038953B /* ShadowView.swift */; };
+		410E78A51EB596610038953B /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E569F1EB58AFC00BD2D5B /* NSAttributedStringExtension.swift */; };
 		415E56741EB589C900BD2D5B /* SplashWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415E566A1EB589C900BD2D5B /* SplashWindow.framework */; };
 		415E56791EB589C900BD2D5B /* SplashWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56781EB589C900BD2D5B /* SplashWindowTests.swift */; };
 		415E567B1EB589C900BD2D5B /* SplashWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 415E566D1EB589C900BD2D5B /* SplashWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		415E568D1EB58A2C00BD2D5B /* AuthSettings.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415E568C1EB58A2C00BD2D5B /* AuthSettings.xcassets */; };
-		415E56AE1EB58AFD00BD2D5B /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E569F1EB58AFC00BD2D5B /* NSAttributedStringExtension.swift */; };
 		415E56AF1EB58AFD00BD2D5B /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A01EB58AFC00BD2D5B /* SwiftyUserDefaults.swift */; };
 		415E56B01EB58AFD00BD2D5B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A11EB58AFC00BD2D5B /* UIButtonExtension.swift */; };
 		415E56B11EB58AFD00BD2D5B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A21EB58AFC00BD2D5B /* UIColorExtension.swift */; };
@@ -23,6 +24,8 @@
 		415E56B71EB58AFD00BD2D5B /* SplashWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A91EB58AFD00BD2D5B /* SplashWindow.swift */; };
 		415E56B81EB58AFD00BD2D5B /* AuthStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */; };
 		415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */; };
+		41D5AB2B1EB5993300F8779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AB2A1EB5993300F8779E /* Assets.xcassets */; };
+		41D5AB3D1EB59D0000F8779E /* ttm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AB3C1EB59D0000F8779E /* ttm.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		410E789D1EB58F9C0038953B /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		410E789E1EB58F9C0038953B /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		415E566A1EB589C900BD2D5B /* SplashWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplashWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		415E566D1EB589C900BD2D5B /* SplashWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashWindow.h; sourceTree = "<group>"; };
 		415E566E1EB589C900BD2D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		415E56731EB589C900BD2D5B /* SplashWindowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplashWindowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		415E56781EB589C900BD2D5B /* SplashWindowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWindowTests.swift; sourceTree = "<group>"; };
 		415E567A1EB589C900BD2D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		415E568C1EB58A2C00BD2D5B /* AuthSettings.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AuthSettings.xcassets; sourceTree = "<group>"; };
 		415E569F1EB58AFC00BD2D5B /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		415E56A01EB58AFC00BD2D5B /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		415E56A11EB58AFC00BD2D5B /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		415E56A91EB58AFD00BD2D5B /* SplashWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashWindow.swift; sourceTree = "<group>"; };
 		415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStrings.swift; sourceTree = "<group>"; };
 		415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViews.swift; sourceTree = "<group>"; };
+		41D5AB2A1EB5993300F8779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41D5AB3C1EB59D0000F8779E /* ttm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ttm.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410E789C1EB58F9C0038953B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				410E789D1EB58F9C0038953B /* ShadowButton.swift */,
+				410E789E1EB58F9C0038953B /* ShadowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		415E56601EB589C900BD2D5B = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +116,10 @@
 				415E569E1EB58AFC00BD2D5B /* Extensions */,
 				415E56AA1EB58AFD00BD2D5B /* Strings */,
 				415E56AC1EB58AFD00BD2D5B /* Utils */,
-				415E568C1EB58A2C00BD2D5B /* AuthSettings.xcassets */,
+				410E789C1EB58F9C0038953B /* Views */,
 				415E566D1EB589C900BD2D5B /* SplashWindow.h */,
 				415E566E1EB589C900BD2D5B /* Info.plist */,
+				41D5AB2A1EB5993300F8779E /* Assets.xcassets */,
 			);
 			path = SplashWindow;
 			sourceTree = "<group>";
@@ -137,6 +153,7 @@
 				415E56A81EB58AFD00BD2D5B /* SplashWindow.storyboard */,
 				415E56A61EB58AFD00BD2D5B /* AppAuthentication.swift */,
 				415E56A71EB58AFD00BD2D5B /* OptionsViewController.swift */,
+				41D5AB3C1EB59D0000F8779E /* ttm.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -253,8 +270,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				415E568D1EB58A2C00BD2D5B /* AuthSettings.xcassets in Resources */,
+				41D5AB2B1EB5993300F8779E /* Assets.xcassets in Resources */,
 				415E56B61EB58AFD00BD2D5B /* SplashWindow.storyboard in Resources */,
+				41D5AB3D1EB59D0000F8779E /* ttm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +294,13 @@
 				415E56B31EB58AFD00BD2D5B /* UIViewExtension.swift in Sources */,
 				415E56B81EB58AFD00BD2D5B /* AuthStrings.swift in Sources */,
 				415E56B51EB58AFD00BD2D5B /* OptionsViewController.swift in Sources */,
+				410E78A51EB596610038953B /* NSAttributedStringExtension.swift in Sources */,
 				415E56B41EB58AFD00BD2D5B /* AppAuthentication.swift in Sources */,
 				415E56AF1EB58AFD00BD2D5B /* SwiftyUserDefaults.swift in Sources */,
-				415E56AE1EB58AFD00BD2D5B /* NSAttributedStringExtension.swift in Sources */,
+				410E789F1EB58F9C0038953B /* ShadowButton.swift in Sources */,
 				415E56B21EB58AFD00BD2D5B /* UIStoryboardExtension.swift in Sources */,
 				415E56B01EB58AFD00BD2D5B /* UIButtonExtension.swift in Sources */,
+				410E78A01EB58F9C0038953B /* ShadowView.swift in Sources */,
 				415E56B11EB58AFD00BD2D5B /* UIColorExtension.swift in Sources */,
 				415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */,
 			);
@@ -492,6 +512,7 @@
 				415E56801EB589C900BD2D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		415E56811EB589C900BD2D5B /* Build configuration list for PBXNativeTarget "SplashWindowTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +521,7 @@
 				415E56831EB589C900BD2D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

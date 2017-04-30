@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 //MARK: ShowHide view
-extension UIView {
+public extension UIView {
     public func showSelf(show: Bool, animated: Bool) {
         showSelf(show: show,
                  animated: animated,
@@ -46,7 +46,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     func addBlurView() {
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
@@ -74,7 +74,7 @@ extension UIView {
 }
 
 //MARK: Auto Layout
-extension UIView {
+public extension UIView {
     
     /**
      Pin four edges to superview

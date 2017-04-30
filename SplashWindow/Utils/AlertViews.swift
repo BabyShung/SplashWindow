@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class AlertViews {
+public class AlertViews {
     class func show(title: String?, msg: String?, okTitle: String?) {
         let alertView = UIAlertController(title: title,
                                           message: msg,

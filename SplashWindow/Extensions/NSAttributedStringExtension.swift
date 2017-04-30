@@ -1,7 +1,7 @@
 
 import UIKit
 
-extension NSAttributedString {
+public extension NSAttributedString {
     class func indentString(text: String, val: CGFloat) -> NSAttributedString {
         let style = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         style.alignment = .justified

@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 import LocalAuthentication
 
-class SplashWindow: UIWindow {
+public class SplashWindow: UIWindow {
     
     //Public
     fileprivate(set) var isAuthenticating: Bool = false
@@ -22,8 +22,10 @@ class SplashWindow: UIWindow {
         return transition
     } ()
     lazy fileprivate var optionVC: OptionsViewController = {
-        let optionVC = UIStoryboard.named(String(describing: SplashWindow.self),
-                                          vc: String(describing: OptionsViewController.self)) as! OptionsViewController
+        
+        let sb = UIStoryboard(name: String(describing: SplashWindow.self), bundle: Bundle(identifier: "com.Planhola.SplashWindow"))
+        
+        let optionVC = sb.instantiateViewController(withIdentifier: String(describing: OptionsViewController.self)) as! OptionsViewController
         optionVC.modalPresentationStyle = .overCurrentContext
         optionVC.modalTransitionStyle = .crossDissolve
         return optionVC
@@ -35,7 +37,7 @@ class SplashWindow: UIWindow {
      - launchScreen in a xib
      - launchScreen in a storyboard
      */
-    convenience init(window: UIWindow,
+    public convenience init(window: UIWindow,
                      launchXibName: String,
                      success: @escaping (PasscodeTouchIDAuth) -> (),
                      logout: @escaping () -> ()) {
@@ -49,7 +51,7 @@ class SplashWindow: UIWindow {
         splashView.constraintEdges(to: self)
     }
     
-    init(window: UIWindow,
+    public init(window: UIWindow,
          launchViewController: UIViewController,
          success: @escaping (PasscodeTouchIDAuth) -> (),
          logout: @escaping () -> ()) {
@@ -62,13 +64,13 @@ class SplashWindow: UIWindow {
         rootViewController = launchViewController
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 //MARK: Public
-extension SplashWindow {
+public extension SplashWindow {
     
     func authenticateUser(initialVC: UIViewController? = nil) {
         
@@ -195,12 +197,12 @@ extension SplashWindow {
     }
 }
 
-enum PasscodeTouchIDAuth: Int {
+public enum PasscodeTouchIDAuth: Int {
     case passcodeAuth
     case touchIDAuth
 }
 
-extension UIWindow {
+public extension UIWindow {
     func transitionRootTo(_ vc: UIViewController) {
         transitionRootTo(vc, completion: { _ in })
     }
@@ -218,7 +220,7 @@ extension UIWindow {
     }
 }
 
-class App {
+public class App {
     static var shared = UIApplication.shared
     static var delegate = App.shared.delegate!
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionsViewController: UIViewController {
+public class OptionsViewController: UIViewController {
     
     @IBOutlet weak var touchIDBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
@@ -16,7 +16,7 @@ class OptionsViewController: UIViewController {
     var didClickTouchID: (UIButton) -> () = { _ in }
     var didClicklogout: () -> () = { _ in }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         touchIDBtn.setTitle(AuthStrings.touchID, for: UIControlState())

@@ -15,7 +15,7 @@
         <!--Options View Controller-->
         <scene sceneID="Jh0-Fa-uf0">
             <objects>
-                <viewController storyboardIdentifier="OptionsViewController" id="ubB-of-Gu5" customClass="OptionsViewController" customModule="Planhola" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OptionsViewController" id="ubB-of-Gu5" customClass="OptionsViewController" customModule="SplashWindow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="byX-Pm-OZq"/>
                         <viewControllerLayoutGuide type="bottom" id="oeQ-jT-kQU"/>
@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ3-88-cmn" customClass="ShadowButton" customModule="Planhola" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ3-88-cmn" customClass="ShadowButton" customModule="SplashWindow" customModuleProvider="target">
                                 <rect key="frame" x="222.5" y="279" width="110" height="110"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" image="logout">
@@ -39,14 +39,14 @@
                                     <action selector="didClickLogoutBtn:" destination="ubB-of-Gu5" eventType="touchUpInside" id="Vzc-aH-7CX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPy-g1-sYa" customClass="ShadowButton" customModule="Planhola" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPy-g1-sYa" customClass="ShadowButton" customModule="SplashWindow" customModuleProvider="target">
                                 <rect key="frame" x="42.5" y="279" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iPy-g1-sYa" secondAttribute="height" multiplier="1:1" id="4Z0-Rw-GS9"/>
                                     <constraint firstAttribute="width" constant="110" id="a6l-Hp-fHg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" image="Touch">
+                                <state key="normal" image="touch">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -80,7 +80,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Touch" width="58" height="58"/>
         <image name="logout" width="60" height="60"/>
+        <image name="touch" width="58" height="58"/>
     </resources>
 </document>
