@@ -2,6 +2,7 @@
 import Foundation
 import LocalAuthentication
 import UIKit
+import ZHExtensions
 
 public class AppAuthentication {
     

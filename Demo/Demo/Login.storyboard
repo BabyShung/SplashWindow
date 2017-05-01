@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="MRv-YR-rqW">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="B9G-or-FeR" customClass="LoginViewController" customModule="Planhola" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nza-l6-X8m"/>
+                        <viewControllerLayoutGuide type="bottom" id="qfG-RS-Ohq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LY3-SO-DHz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1E-7Z-vbO" customClass="ShadowButton" customModule="SplashWindow">
+                                <rect key="frame" x="97.5" y="273" width="180" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="YyI-e8-TNf"/>
+                                    <constraint firstAttribute="width" constant="180" id="yj2-cw-h1V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="user">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didClickLoginBtn:" destination="B9G-or-FeR" eventType="touchUpInside" id="bex-0L-HGA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x1E-7Z-vbO" firstAttribute="centerX" secondItem="LY3-SO-DHz" secondAttribute="centerX" id="83a-eL-WPa"/>
+                            <constraint firstItem="x1E-7Z-vbO" firstAttribute="centerY" secondItem="LY3-SO-DHz" secondAttribute="centerY" id="HG1-HQ-Yvr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="x1E-7Z-vbO" id="aNq-G7-qph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2H-1u-aDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648.79999999999995" y="-80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="user" width="50" height="50"/>
+    </resources>
+</document>
