@@ -76,7 +76,10 @@ public extension SplashWindow {
     
     func authenticateUser(initialVC: UIViewController? = nil) {
         
-        guard !isAuthenticating else { return }
+        guard !isAuthenticating else {
+            didEnterBackground = false
+            return
+        }
         
         guard !authenticateFromTouchID else {
             authenticateFromTouchID = false
