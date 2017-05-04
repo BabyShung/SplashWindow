@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //just default to use a 
         let initialVC = UINavigationController(rootViewController: AuthFlowController().authSettingVC)
         splashWindow.authenticateUser(initialVC: initialVC)
         
@@ -43,6 +44,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        /*
+         If you have a loginVC and only want to authenticate
+         after login, then check if is logged in here:
+         
+         if APP_IS_LOGGEDIN {
+            splashWindow.authenticateUser()
+         }
+         
+         */
         
         splashWindow.authenticateUser()
     }

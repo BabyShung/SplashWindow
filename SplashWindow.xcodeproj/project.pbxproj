@@ -19,7 +19,6 @@
 		415E56B81EB58AFD00BD2D5B /* AuthStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */; };
 		415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */; };
 		41D5AB2B1EB5993300F8779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AB2A1EB5993300F8779E /* Assets.xcassets */; };
-		41D5AB3D1EB59D0000F8779E /* ttm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AB3C1EB59D0000F8779E /* ttm.storyboard */; };
 		41D5AB911EB6AAE500F8779E /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D5AB8F1EB6AAD600F8779E /* ZHExtensions.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,6 @@
 		415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStrings.swift; sourceTree = "<group>"; };
 		415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViews.swift; sourceTree = "<group>"; };
 		41D5AB2A1EB5993300F8779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41D5AB3C1EB59D0000F8779E /* ttm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ttm.storyboard; sourceTree = "<group>"; };
 		41D5AB791EB6AA8000F8779E /* ZHExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZHExtensions.xcodeproj; path = ZHExtensions/ZHExtensions/ZHExtensions.xcodeproj; sourceTree = "<group>"; };
 		41D5AB8F1EB6AAD600F8779E /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZHExtensions.framework; path = "../../../Library/Developer/Xcode/DerivedData/SplashWindow-deflilppwdbhxifpgbyehvrsgcyq/Build/Products/Debug-iphoneos/ZHExtensions.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +145,6 @@
 				415E56A81EB58AFD00BD2D5B /* SplashWindow.storyboard */,
 				415E56A61EB58AFD00BD2D5B /* AppAuthentication.swift */,
 				415E56A71EB58AFD00BD2D5B /* OptionsViewController.swift */,
-				41D5AB3C1EB59D0000F8779E /* ttm.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 			files = (
 				41D5AB2B1EB5993300F8779E /* Assets.xcassets in Resources */,
 				415E56B61EB58AFD00BD2D5B /* SplashWindow.storyboard in Resources */,
-				41D5AB3D1EB59D0000F8779E /* ttm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

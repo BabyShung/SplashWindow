@@ -10,8 +10,8 @@ public class SplashWindow: UIWindow {
     
     //private
     fileprivate unowned var protectedWindow: UIWindow
-    fileprivate var success: (AuthType) -> ()
-    fileprivate var logout: () -> (UIViewController?) = { _ in return nil }
+    fileprivate var authSucceeded: (AuthType) -> ()
+    fileprivate var logoutClosure: () -> (UIViewController?) = { _ in return nil }
     fileprivate var initialVC: UIViewController?
     fileprivate var authenticateFromTouchID = false
     fileprivate var didEnterBackground: Bool = true //assume first launch is in bg
@@ -25,7 +25,7 @@ public class SplashWindow: UIWindow {
     
     lazy fileprivate var optionVC: OptionsViewController = {
         
-        let sb = UIStoryboard(name: String(describing: SplashWindow.self), bundle: Bundle(identifier: "com.Planhola.SplashWindow"))
+        let sb = UIStoryboard(name: String(describing: SplashWindow.self), bundle: Bundle(for: SplashWindow.self))
         
         let optionVC = sb.instantiateViewController(withIdentifier: String(describing: OptionsViewController.self)) as! OptionsViewController
         optionVC.modalPresentationStyle = .overCurrentContext
@@ -58,8 +58,8 @@ public class SplashWindow: UIWindow {
          success: @escaping (AuthType) -> (),
          logout: @escaping () -> (UIViewController?)) {
         self.protectedWindow = window
-        self.success = success
-        self.logout = logout
+        self.authSucceeded = success
+        self.logoutClosure = logout
         super.init(frame: window.frame)
         windowLevel = UIWindowLevelAlert - 1
         isHidden = true
@@ -153,7 +153,7 @@ extension SplashWindow {
         default:
             break
         }
-        success(type)
+        authSucceeded(type)
     }
     
     fileprivate func showTouchID() {
@@ -183,7 +183,7 @@ extension SplashWindow {
         AppAuthentication.storage.removeAllInfo()
 
         //if we have a logout closure
-        if let loginVC = self.logout() {
+        if let loginVC = self.logoutClosure() {
             //transition to loginVC
             protectedWindow.transitionRootTo(loginVC) { [unowned self] _ in
                 //hide splash window
