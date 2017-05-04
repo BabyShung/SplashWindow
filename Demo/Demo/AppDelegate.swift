@@ -26,9 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //just default to use a 
         let initialVC = UINavigationController(rootViewController: AuthFlowController().authSettingVC)
-        splashWindow.authenticateUser(initialVC: initialVC)
+        /*
+         Use your logic to determine whether your app is loggedIn
+         initialVC can be any of your viewController, but must make sure if it's loggedIn when showing this VC
+         */
+        splashWindow.authenticateUser(isLoggedIn: true,
+                                      initialVC: initialVC)
         
         return true
     }
@@ -46,16 +50,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         
         /*
-         If you have a loginVC and only want to authenticate
-         after login, then check if is logged in here:
-         
-         if APP_IS_LOGGEDIN {
-            splashWindow.authenticateUser()
-         }
-         
+         Use your logic to determine whether your app is loggedIn
          */
-        
-        splashWindow.authenticateUser()
+        let rootIsLoginVC = window?.rootViewController is LoginViewController
+        splashWindow.authenticateUser(isLoggedIn: !rootIsLoginVC)
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {

@@ -74,8 +74,9 @@ public class SplashWindow: UIWindow {
 //MARK: Public
 public extension SplashWindow {
     
-    func authenticateUser(initialVC: UIViewController? = nil) {
-        
+    func authenticateUser(isLoggedIn: Bool,
+                          initialVC: UIViewController? = nil) {
+
         guard !isAuthenticating else {
             didEnterBackground = false
             return
@@ -94,14 +95,14 @@ public extension SplashWindow {
             return
         }
         
-        var shouldVerify = false
-        if didEnterBackground {
-            shouldVerify = showPasscodeTouchIDIfNeeded()
+        if isLoggedIn && didEnterBackground {
+            showPasscodeTouchIDIfNeeded()
             didEnterBackground = false
         }
         
+        //if first launching the app
         if let initialVC = initialVC {
-            if shouldVerify {
+            if isLoggedIn {
                 self.initialVC = initialVC
                 protectedWindow.rootViewController = UIViewController() //dummy
             } else {
@@ -129,12 +130,11 @@ public extension SplashWindow {
 //MARK: Private
 extension SplashWindow {
     
-    fileprivate func showPasscodeTouchIDIfNeeded() -> Bool {
-        guard AppAuthentication.authEnabled else { return false }
+    fileprivate func showPasscodeTouchIDIfNeeded() {
+        guard AppAuthentication.authEnabled else { return }
         showSelf(show: true, animated: false)
         isAuthenticating = true
         AppAuthentication.touchIDEnabled ? showTouchID() : showOptionView()
-        return true
     }
     
     fileprivate func authenticationSucceeded(type: AuthType) {
