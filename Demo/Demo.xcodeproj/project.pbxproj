@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41C306461EBAD9800051C98F /* SplashWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C306441EBAD9800051C98F /* SplashWindow.framework */; };
-		41C306471EBAD9800051C98F /* SplashWindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41C306441EBAD9800051C98F /* SplashWindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		41C306481EBAD9800051C98F /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C306451EBAD9800051C98F /* ZHExtensions.framework */; };
-		41C306491EBAD9800051C98F /* ZHExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 41C306451EBAD9800051C98F /* ZHExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		418D62211EBD45E200637DBB /* SplashWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418D621F1EBD45E200637DBB /* SplashWindow.framework */; };
+		418D62221EBD45E200637DBB /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418D62201EBD45E200637DBB /* ZHExtensions.framework */; };
 		41D5AC251EB6B85300F8779E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AC231EB6B85300F8779E /* Main.storyboard */; };
 		41D5AC271EB6B85300F8779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AC261EB6B85300F8779E /* Assets.xcassets */; };
 		41D5AC2A1EB6B85300F8779E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AC281EB6B85300F8779E /* LaunchScreen.storyboard */; };
@@ -65,8 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				41C306491EBAD9800051C98F /* ZHExtensions.framework in Embed Frameworks */,
-				41C306471EBAD9800051C98F /* SplashWindow.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,8 +71,8 @@
 
 /* Begin PBXFileReference section */
 		4182B8F51EB97DDA004D1511 /* SplashWindow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SplashWindow.xcodeproj; path = ../SplashWindow.xcodeproj; sourceTree = "<group>"; };
-		41C306441EBAD9800051C98F /* SplashWindow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplashWindow.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-fjrvljijcbllovghlwtgwsutlnrm/Build/Products/Debug-iphoneos/SplashWindow.framework"; sourceTree = "<group>"; };
-		41C306451EBAD9800051C98F /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZHExtensions.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-fjrvljijcbllovghlwtgwsutlnrm/Build/Products/Debug-iphoneos/ZHExtensions.framework"; sourceTree = "<group>"; };
+		418D621F1EBD45E200637DBB /* SplashWindow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplashWindow.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-fjrvljijcbllovghlwtgwsutlnrm/Build/Products/Debug-iphonesimulator/SplashWindow.framework"; sourceTree = "<group>"; };
+		418D62201EBD45E200637DBB /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZHExtensions.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-fjrvljijcbllovghlwtgwsutlnrm/Build/Products/Debug-iphonesimulator/ZHExtensions.framework"; sourceTree = "<group>"; };
 		41D5AC1C1EB6B85300F8779E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D5AC241EB6B85300F8779E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41D5AC261EB6B85300F8779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,8 +93,6 @@
 		41D5AC551EB6B8C600F8779E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41D5AC561EB6B8C600F8779E /* SharedSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSwitchTableViewCell.swift; sourceTree = "<group>"; };
 		41D5AC571EB6B8C600F8779E /* SharedSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedSwitchTableViewCell.xib; sourceTree = "<group>"; };
-		41E031341EB6BD4D00230FA0 /* SplashWindow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SplashWindow.framework; sourceTree = "<group>"; };
-		41E031351EB6BD4D00230FA0 /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZHExtensions.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41C306481EBAD9800051C98F /* ZHExtensions.framework in Frameworks */,
-				41C306461EBAD9800051C98F /* SplashWindow.framework in Frameworks */,
+				418D62211EBD45E200637DBB /* SplashWindow.framework in Frameworks */,
+				418D62221EBD45E200637DBB /* ZHExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +125,8 @@
 		4182B8F21EB96F5D004D1511 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				41E031341EB6BD4D00230FA0 /* SplashWindow.framework */,
-				41E031351EB6BD4D00230FA0 /* ZHExtensions.framework */,
+				418D621F1EBD45E200637DBB /* SplashWindow.framework */,
+				418D62201EBD45E200637DBB /* ZHExtensions.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,14 +151,12 @@
 		41D5AC131EB6B85300F8779E = {
 			isa = PBXGroup;
 			children = (
-				41C306441EBAD9800051C98F /* SplashWindow.framework */,
-				41C306451EBAD9800051C98F /* ZHExtensions.framework */,
-				4182B8F51EB97DDA004D1511 /* SplashWindow.xcodeproj */,
 				41D5AC1E1EB6B85300F8779E /* Demo */,
 				41D5AC331EB6B85300F8779E /* DemoTests */,
 				41D5AC3E1EB6B85300F8779E /* DemoUITests */,
 				41D5AC1D1EB6B85300F8779E /* Products */,
 				4182B8F21EB96F5D004D1511 /* Frameworks */,
+				4182B8F51EB97DDA004D1511 /* SplashWindow.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
