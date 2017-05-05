@@ -8,10 +8,13 @@ public class AppAuthentication {
     
     public static let shared = AppAuthentication()
     
-    //MARK: static vars
+    //MARK: vars
     public var storage: SWStorage {
         return UserDefaults.standard
     }
+    
+    /// TouchID Message in the alert
+    public var touchIDMessage: String = AuthStrings.authenticateDesc
     
     /// Whether your touchID or passcode is on
     public var authEnabled: Bool {
@@ -64,7 +67,7 @@ public class AppAuthentication {
             return
         }
         
-        let reason = AuthStrings.authenticateFirst
+        let reason = touchIDMessage
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { (success, error) in
             DispatchQueue.main.async(execute: {
                 handler(success, error as NSError?)

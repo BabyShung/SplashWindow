@@ -17,14 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var splashWindow: SplashWindow = {
         let identifier = "LaunchScreen"
         let vc = UIStoryboard.named(identifier, vc: identifier)
-        return SplashWindow.init(window: self.window!,
-                                 launchViewController: vc,
-                                 success: { authType in
-            //auth succeeded closure
-        }, logout: { _ in
-            //return a loginVC after clicking logout
+        let splashWindow = SplashWindow.init(window: self.window!, launchViewController: vc)
+        
+        /** Customization - otherwise default
+         
+            splashWindow.touchIDMessage = "YOUR MESSAGE"
+         
+            splashWindow.touchIDBtnImage = UIImage(named: "user.png")
+         
+            splashWindow.logoutBtnImage = UIImage(named: "user.png")
+         
+         */
+        
+        //Auth succeeded closure
+        splashWindow.authSucceededClosure = { _ in }
+        
+        //Return a loginVC after clicking logout
+        splashWindow.logoutClosure = { _ in
             return UIStoryboard.named("Login", vc: "LoginViewController")
-        })
+        }
+        return splashWindow
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -34,8 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          Use your logic to determine whether your app is loggedIn
          initialVC can be any of your viewController, but must make sure if it's loggedIn when showing this VC
          */
-        splashWindow.authenticateUser(isLoggedIn: true,
-                                      initialVC: initialVC)
+        splashWindow.authenticateUser(isLoggedIn: true, initialVC: initialVC)
         
         return true
     }
@@ -62,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             splashWindow.authenticateUser(isLoggedIn: true)
             guard !splashWindow.isAuthenticating { return }
          */
-        
         
         let rootIsLoginVC = window?.rootViewController is LoginViewController
         splashWindow.authenticateUser(isLoggedIn: !rootIsLoginVC)

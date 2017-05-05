@@ -13,20 +13,14 @@ class SplashWindowTests: XCTestCase {
     
     func testInitializers() {
         let protectedWindow = UIWindow()
-        let splash = SplashWindow.init(window: protectedWindow,
-                                       launchViewController: UIViewController(),
-                                       success: { _ in },
-                                       logout: { _ in return nil })
+        let splash = SplashWindow.init(window: protectedWindow, launchViewController: UIViewController())
         XCTAssertNotNil(splash.rootViewController)
     }
     
     func testIsAuthenticating() {
 
         let protectedWindow = UIWindow()
-        let splash = SplashWindow.init(window: protectedWindow,
-                                       launchViewController: UIViewController(),
-                                       success: { _ in },
-                                       logout: { _ in return nil })
+        let splash = SplashWindow.init(window: protectedWindow, launchViewController: UIViewController())
         
         //using fake appAuth
         let fakeAppAuth = FakeAppAuthentication()

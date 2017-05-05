@@ -5,20 +5,41 @@ import LocalAuthentication
 
 public class SplashWindow: UIWindow {
     
-    //PUBLIC
+    /* PUBLIC */
+    public var touchIDMessage = "" {
+        didSet {
+            appAuth.touchIDMessage = touchIDMessage
+        }
+    }
+    
+    public var touchIDBtnImage: UIImage? {
+        didSet {
+            optionVC.touchIDBtnImage = touchIDBtnImage
+        }
+    }
+    
+    public var logoutBtnImage: UIImage? {
+        didSet {
+            optionVC.logoutBtnBtnImage = touchIDBtnImage
+        }
+    }
+    
+    /// Closure when auth succeeded
+    public var authSucceededClosure: (AuthType) -> () = { _ in }
+    
+    /// Closure when clicked logout btn. Expecting a returned loginVC for transition
+    public var logoutClosure: () -> (UIViewController?) = { _ in return nil }
+    
     /// True if self showing touchID/passcode, false if default or auth succeeded
     public fileprivate(set) var isAuthenticating: Bool = false
+    
+    /// App authentication class
     public unowned var appAuth = AppAuthentication.shared
     
-    //PRIVATE
+    /* PRIVATE */
     /// App main window
     fileprivate unowned var protectedWindow: UIWindow
     
-    /// Closure when auth succeeded
-    fileprivate var authSucceeded: (AuthType) -> ()
-    
-    /// Closure when clicked logout btn. Expecting a returned loginVC for transition
-    fileprivate var logoutClosure: () -> (UIViewController?) = { _ in return nil }
     
     /// Your initial view controller
     fileprivate var initialVC: UIViewController?
@@ -51,26 +72,16 @@ public class SplashWindow: UIWindow {
      - launchScreen in a storyboard
      */
     public convenience init(window: UIWindow,
-                     launchXibName: String,
-                     success: @escaping (AuthType) -> (),
-                     logout: @escaping () -> (UIViewController?)) {
+                     launchXibName: String) {
         let dummyVC = UIViewController()
         dummyVC.view.isHidden = true
-        self.init(window: window,
-                  launchViewController: dummyVC,
-                  success: success,
-                  logout: logout)
+        self.init(window: window, launchViewController: dummyVC)
         guard let splashView = Bundle.main.loadNibNamed(launchXibName, owner: nil, options: nil)?.first as? UIView else { return }
         splashView.constraintEdges(to: self)
     }
     
-    public init(window: UIWindow,
-         launchViewController: UIViewController,
-         success: @escaping (AuthType) -> (),
-         logout: @escaping () -> (UIViewController?)) {
+    public init(window: UIWindow, launchViewController: UIViewController) {
         self.protectedWindow = window
-        self.authSucceeded = success
-        self.logoutClosure = logout
         super.init(frame: window.frame)
         windowLevel = UIWindowLevelAlert - 1
         isHidden = true
@@ -166,7 +177,7 @@ extension SplashWindow {
         default:
             break
         }
-        authSucceeded(type)
+        authSucceededClosure(type)
     }
     
     fileprivate func showTouchID() {
