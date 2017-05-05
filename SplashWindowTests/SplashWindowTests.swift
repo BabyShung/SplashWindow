@@ -13,7 +13,10 @@ class SplashWindowTests: XCTestCase {
     
     func testInitializers() {
         let protectedWindow = UIWindow()
-        let splash = SplashWindow.init(window: protectedWindow, launchViewController: UIViewController())
+        var splash = SplashWindow.init(window: protectedWindow, launchViewController: UIViewController())
+        XCTAssertNotNil(splash.rootViewController)
+        
+        splash = SplashWindow.init(window: protectedWindow, launchXibView: UIView())
         XCTAssertNotNil(splash.rootViewController)
     }
     

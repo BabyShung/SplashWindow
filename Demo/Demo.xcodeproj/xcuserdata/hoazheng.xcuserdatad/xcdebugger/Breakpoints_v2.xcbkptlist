@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "showPasscodeTouchIDIfNeeded()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "init(coder:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "showSplashView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "authenticateUser(isLoggedIn:initialVC:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "authenticateUser(isLoggedIn:initialVC:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "authenticateUser(isLoggedIn:initialVC:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "showSplashView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "authenticateUser(isLoggedIn:initialVC:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../SplashWindow/Main/SplashWindow.swift"
-            timestampString = "515711223.957951"
+            timestampString = "515719196.517803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "cleanup()"
             landmarkType = "7">
             <Locations>
@@ -154,11 +154,11 @@
                   moduleName = "SplashWindow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindow/Main/SplashWindow.swift"
-                  timestampString = "515712133.422159"
+                  timestampString = "515718702.950795"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
                   offsetFromSymbolStart = "169">
                </Location>
                <Location
@@ -169,12 +169,60 @@
                   moduleName = "SplashWindow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindow/Main/SplashWindow.swift"
-                  timestampString = "515712133.423819"
+                  timestampString = "515718702.953208"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212"
+                  startingLineNumber = "211"
+                  endingLineNumber = "211"
                   offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../SplashWindowTests/SplashWindowTests.swift"
+            timestampString = "515718890.359641"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "SplashWindowTests"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplashWindowTests.SplashWindowTests.testInitializers () -&gt; ()"
+                  moduleName = "SplashWindowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindowTests/SplashWindowTests.swift"
+                  timestampString = "515718702.941529"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "2383">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplashWindowTests.SplashWindowTests.(testInitializers () -&gt; ()).(implicit closure #2)"
+                  moduleName = "SplashWindowTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindowTests/SplashWindowTests.swift"
+                  timestampString = "515718702.942928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "19">
                </Location>
             </Locations>
          </BreakpointContent>
