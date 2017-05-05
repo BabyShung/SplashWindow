@@ -139,11 +139,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class UIImage;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12SplashWindow21OptionsViewController")
 @interface OptionsViewController : UIViewController
+@property (nonatomic, strong) UIImage * _Nullable touchIDBtnImage;
+@property (nonatomic, strong) UIImage * _Nullable logoutBtnBtnImage;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -181,8 +184,24 @@ SWIFT_CLASS("_TtC12SplashWindow12SWShadowView")
 
 SWIFT_CLASS("_TtC12SplashWindow12SplashWindow")
 @interface SplashWindow : UIWindow
+@property (nonatomic, copy) NSString * _Nonnull touchIDMessage;
+@property (nonatomic, strong) UIImage * _Nullable touchIDBtnImage;
+@property (nonatomic, strong) UIImage * _Nullable logoutBtnImage;
+/// Closure when clicked logout btn. Expecting a returned loginVC for transition
+@property (nonatomic, copy) UIViewController * _Nullable (^ _Nonnull logoutClosure)(void);
 /// True if self showing touchID/passcode, false if default or auth succeeded
 @property (nonatomic, readonly) BOOL isAuthenticating;
+/// Depends on where your launch screen lives
+/// <ul>
+///   <li>
+///     launchScreen in a xib
+///   </li>
+///   <li>
+///     launchScreen in a storyboard
+///   </li>
+/// </ul>
+- (nonnull instancetype)initWithWindow:(UIWindow * _Nonnull)window launchXibName:(NSString * _Nonnull)launchXibName;
+- (nonnull instancetype)initWithWindow:(UIWindow * _Nonnull)window launchViewController:(UIViewController * _Nonnull)launchViewController OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
