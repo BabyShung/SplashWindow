@@ -3,7 +3,7 @@ import Foundation
 
 public class AuthStrings {
     
-    public static var authenticateFirst: String {
+    public static var authenticateDesc: String {
         return NSLocalizedString("Please authenticate in order to proceed", comment: "")
     }
     
