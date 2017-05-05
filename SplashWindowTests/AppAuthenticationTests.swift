@@ -11,19 +11,11 @@ import XCTest
 
 class AppAuthenticationTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
     func testAppAuth() {
         let appAuth = FakeAppAuthentication()
         let storage = appAuth.fakeStorage
         
-        //TouchID - touchIDObjectInStorage: Bool?
+        //get TouchID - touchIDObjectInStorage: Bool?
         for (touchIDEnabledOnDevice, touchIDObjectInStorage, expectedTouchIDEnable) in [
             (false, true, false),
             (false, false, false),
@@ -33,9 +25,17 @@ class AppAuthenticationTests: XCTestCase {
                 appAuth.fakeTouchIDEnabledOnDevice = touchIDEnabledOnDevice
                 storage.fakeTouchIDObjectInStorage = touchIDObjectInStorage
                 XCTAssertEqual(appAuth.touchIDEnabled, expectedTouchIDEnable)
+                XCTAssertEqual(appAuth.touchIDEnabled, appAuth.authEnabled)
+        }
+        
+        //set TouchID
+        appAuth.fakeTouchIDEnabledOnDevice = true
+        storage.fakeTouchIDObjectInStorage = true
+        for enable in [true, false] {
+            appAuth.setTouchID(enabled: enable)
+            XCTAssertEqual(enable, appAuth.touchIDEnabled)
         }
     }
-    
 }
 
 final class FakeAppAuthentication: AppAuthentication {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41C306681EBC0B510051C98F /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C306671EBC0B510051C98F /* UIViewExtensionTests.swift */; };
+		41C306721EBCDAF40051C98F /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C306711EBCDAF40051C98F /* UIWindowExtension.swift */; };
 		41D5AB691EB6AA6800F8779E /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D5AB5F1EB6AA6800F8779E /* ZHExtensions.framework */; };
 		41D5AB6E1EB6AA6800F8779E /* ZHExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5AB6D1EB6AA6800F8779E /* ZHExtensionsTests.swift */; };
 		41D5AB701EB6AA6800F8779E /* ZHExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D5AB621EB6AA6800F8779E /* ZHExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		41C306671EBC0B510051C98F /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
+		41C306711EBCDAF40051C98F /* UIWindowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
 		41D5AB5F1EB6AA6800F8779E /* ZHExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZHExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D5AB621EB6AA6800F8779E /* ZHExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHExtensions.h; sourceTree = "<group>"; };
 		41D5AB631EB6AA6800F8779E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				41D5AB851EB6AAAA00F8779E /* UIColorExtension.swift */,
 				41D5AB861EB6AAAA00F8779E /* UIStoryboardExtension.swift */,
 				41D5AB871EB6AAAA00F8779E /* UIViewExtension.swift */,
+				41C306711EBCDAF40051C98F /* UIWindowExtension.swift */,
 				41D5AB621EB6AA6800F8779E /* ZHExtensions.h */,
 				41D5AB631EB6AA6800F8779E /* Info.plist */,
 			);
@@ -223,6 +226,7 @@
 				41D5AB8D1EB6AAAA00F8779E /* UIViewExtension.swift in Sources */,
 				41D5AB891EB6AAAA00F8779E /* SwiftyUserDefaults.swift in Sources */,
 				41D5AB881EB6AAAA00F8779E /* NSAttributedStringExtension.swift in Sources */,
+				41C306721EBCDAF40051C98F /* UIWindowExtension.swift in Sources */,
 				41D5AB8C1EB6AAAA00F8779E /* UIStoryboardExtension.swift in Sources */,
 				41D5AB8A1EB6AAAA00F8779E /* UIButtonExtension.swift in Sources */,
 				41D5AB8B1EB6AAAA00F8779E /* UIColorExtension.swift in Sources */,

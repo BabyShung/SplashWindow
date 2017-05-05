@@ -11,19 +11,35 @@ import XCTest
 
 class SplashWindowTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testInitializers() {
+        let protectedWindow = UIWindow()
+        let splash = SplashWindow.init(window: protectedWindow,
+                                       launchViewController: UIViewController(),
+                                       success: { _ in },
+                                       logout: { _ in return nil })
+        XCTAssertNotNil(splash.rootViewController)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testIsAuthenticating() {
+
+        let protectedWindow = UIWindow()
+        let splash = SplashWindow.init(window: protectedWindow,
+                                       launchViewController: UIViewController(),
+                                       success: { _ in },
+                                       logout: { _ in return nil })
+        
+        //using fake appAuth
+        let fakeAppAuth = FakeAppAuthentication()
+        fakeAppAuth.fakeTouchIDEnabledOnDevice = true //assume device support touchID
+        
+        //inject
+        splash.appAuth = fakeAppAuth
+        XCTAssertFalse(splash.isAuthenticating)
+        
+        //turn on touchID
+        splash.appAuth.setTouchID(enabled: true)
+        splash.authenticateUser(isLoggedIn: true)
+        XCTAssertTrue(splash.isAuthenticating)
     }
 }
 
