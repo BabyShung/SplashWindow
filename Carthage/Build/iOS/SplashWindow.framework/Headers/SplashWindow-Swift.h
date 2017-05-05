@@ -191,16 +191,19 @@ SWIFT_CLASS("_TtC12SplashWindow12SplashWindow")
 @property (nonatomic, copy) UIViewController * _Nullable (^ _Nonnull logoutClosure)(void);
 /// True if self showing touchID/passcode, false if default or auth succeeded
 @property (nonatomic, readonly) BOOL isAuthenticating;
-/// Depends on where your launch screen lives
-/// <ul>
-///   <li>
-///     launchScreen in a xib
-///   </li>
-///   <li>
-///     launchScreen in a storyboard
-///   </li>
-/// </ul>
-- (nonnull instancetype)initWithWindow:(UIWindow * _Nonnull)window launchXibName:(NSString * _Nonnull)launchXibName;
+/// If your app is using a launchScreen.xib to set the splash screen,
+/// use this initializer for your app
+/// \param window main Window in appDelegate
+///
+/// \param launchXibView UIView from your xib file
+///
+- (nonnull instancetype)initWithWindow:(UIWindow * _Nonnull)window launchXibView:(UIView * _Nonnull)launchXibView;
+/// If your app is using LaunchScreen.storyboard
+/// which contains your launchViewController, use this initializer
+/// \param window main Window in appDelegate
+///
+/// \param launchViewController your launchScreen viewController
+///
 - (nonnull instancetype)initWithWindow:(UIWindow * _Nonnull)window launchViewController:(UIViewController * _Nonnull)launchViewController OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
