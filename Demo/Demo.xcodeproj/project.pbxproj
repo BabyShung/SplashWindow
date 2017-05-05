@@ -146,6 +146,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		41C306631EBC09A80051C98F /* initialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41D5AC521EB6B8C600F8779E /* AuthSettingsViewController.swift */,
+			);
+			name = initialViewController;
+			sourceTree = "<group>";
+		};
 		41D5AC131EB6B85300F8779E = {
 			isa = PBXGroup;
 			children = (
@@ -212,9 +220,9 @@
 		41D5AC4E1EB6B89400F8779E /* AuthSetting */ = {
 			isa = PBXGroup;
 			children = (
+				41C306631EBC09A80051C98F /* initialViewController */,
 				41D5AC501EB6B8C600F8779E /* AuthFlowController.swift */,
 				41D5AC511EB6B8C600F8779E /* AuthSettingsItem.swift */,
-				41D5AC521EB6B8C600F8779E /* AuthSettingsViewController.swift */,
 				41D5AC531EB6B8C600F8779E /* GenericTableViewController.swift */,
 				41D5AC541EB6B8C600F8779E /* Login.storyboard */,
 				41D5AC551EB6B8C600F8779E /* LoginViewController.swift */,

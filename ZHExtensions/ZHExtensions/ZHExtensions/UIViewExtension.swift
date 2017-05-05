@@ -4,6 +4,12 @@ import UIKit
 
 //MARK: ShowHide view
 public extension UIView {
+    
+    /// show or hide current view
+    ///
+    /// - Parameters:
+    ///   - show: show or hide
+    ///   - animated: animated
     public func showSelf(show: Bool, animated: Bool) {
         showSelf(show: show,
                  animated: animated,
@@ -11,9 +17,11 @@ public extension UIView {
                  completion: { _ in })
     }
     
+    
+    /// Root: show or hide current view
     public func showSelf(show: Bool,
                          animated: Bool,
-                         animations: @escaping () -> (),
+                         animations: @escaping () -> () = { _ in },
                          completion: @escaping (Bool) -> ()) {
         guard isHidden == show else { return }
         var alpha: CGFloat
@@ -47,14 +55,14 @@ public extension UIView {
 }
 
 public extension UIView {
-    func addBlurView() {
+    public func addBlurView() {
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.constraintEdges(to: self)
         sendSubview(toBack: blurView)
     }
     
-    func addOnTopMotionEffect(relativeValue: Float = 25.0) {
+    public func addOnTopMotionEffect(relativeValue: Float = 25.0) {
         //Horizontal motion
         var motionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis);
         motionEffect.minimumRelativeValue = relativeValue;
@@ -68,7 +76,7 @@ public extension UIView {
         addMotionEffect(motionEffect);
     }
     
-    func addBelowMotionEffect(relativeValue: Float = 25.0) {
+    public func addBelowMotionEffect(relativeValue: Float = 25.0) {
         addOnTopMotionEffect(relativeValue: -relativeValue)
     }
 }
@@ -79,7 +87,7 @@ public extension UIView {
     /**
      Pin four edges to superview
      */
-    func constraintEdges(to: UIView) {
+    public func constraintEdges(to: UIView) {
         constraintPinToTop(parent: to)
         constraintPinToLeading(parent: to)
         constraintPinToBottom(parent: to)
@@ -95,43 +103,43 @@ public extension UIView {
          */
     }
     
-    func widthConstraint(width: CGFloat) {
+    public func widthConstraint(width: CGFloat) {
         widthHeightConstraintHelper(value: width, isWidth: true)
     }
     
-    func heightConstraint(height: CGFloat) {
+    public func heightConstraint(height: CGFloat) {
         widthHeightConstraintHelper(value: height, isWidth: false)
     }
     
-    func equalWidthToParent(parent: UIView) {
+    public func equalWidthToParent(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .width)
     }
     
-    func equalHeightToParent(parent: UIView) {
+    public func equalHeightToParent(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .height)
     }
     
-    func centerXToParent(parent: UIView) {
+    public func centerXToParent(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .centerX)
     }
     
-    func centerYToParent(parent: UIView) {
+    public func centerYToParent(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .centerY)
     }
     
-    func constraintPinToTop(parent: UIView) {
+    public func constraintPinToTop(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .top)
     }
     
-    func constraintPinToLeading(parent: UIView) {
+    public func constraintPinToLeading(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .left)
     }
     
-    func constraintPinToBottom(parent: UIView) {
+    public func constraintPinToBottom(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .bottom)
     }
     
-    func constraintPinToTrailing(parent: UIView) {
+    public func constraintPinToTrailing(parent: UIView) {
         addSingleConstraintToParent(parent: parent, attr: .trailing)
     }
     
@@ -157,5 +165,4 @@ public extension UIView {
         let dict = getSelfDict()
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: String.init(format: "%@:[view(%f)]", isWidth ? "H" : "V", value), options:NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: dict))
     }
-    
 }

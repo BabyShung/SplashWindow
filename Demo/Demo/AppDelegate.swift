@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SplashWindow-Example
 //
-//  Created by Hoa Zheng on 4/30/17.
+//  Created by Hao Zheng on 4/30/17.
 //  Copyright © 2017 Hao Zheng. All rights reserved.
 //
 
@@ -13,10 +13,13 @@ import SplashWindow
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
     lazy var splashWindow: SplashWindow = {
         let identifier = "LaunchScreen"
         let vc = UIStoryboard.named(identifier, vc: identifier)
-        return SplashWindow.init(window: self.window!, launchViewController: vc, success: { authType in
+        return SplashWindow.init(window: self.window!,
+                                 launchViewController: vc,
+                                 success: { authType in
             //auth succeeded closure
         }, logout: { _ in
             //return a loginVC after clicking logout
@@ -51,17 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /*
          Use your logic to determine whether your app is loggedIn
+         
+         If you already have some code here in didBecome such as refreshing
+         network request or load data from database, if you want to bypass
+         these actions before authentication, use self.splashWindow.isAuthenticating:
+         
+            splashWindow.authenticateUser(isLoggedIn: true)
+            guard !splashWindow.isAuthenticating { return }
          */
+        
+        
         let rootIsLoginVC = window?.rootViewController is LoginViewController
         splashWindow.authenticateUser(isLoggedIn: !rootIsLoginVC)
-    }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        
     }
 }
 

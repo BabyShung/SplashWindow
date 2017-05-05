@@ -6,7 +6,7 @@ import LocalAuthentication
 public class SplashWindow: UIWindow {
     
     //Public
-    fileprivate(set) var isAuthenticating: Bool = false
+    public fileprivate(set) var isAuthenticating: Bool = false
     
     //private
     fileprivate unowned var protectedWindow: UIWindow

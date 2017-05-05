@@ -2,7 +2,11 @@
 import UIKit
 
 public extension UIButton {
-    func centerVertically(padding: CGFloat = 2.0) {
+    
+    /// If you have set an image in self, this will try to center both titleLabel
+    /// and imageView
+    /// - Parameter padding: padding between btn and imageView
+    public func centerVertically(padding: CGFloat = 2.0) {
         guard let imageView = imageView, let titleLabel = titleLabel else { return }
         let imageSize = imageView.frame.size
         let titleSize = titleLabel.frame.size
