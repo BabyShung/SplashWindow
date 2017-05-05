@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ3-88-cmn" customClass="ShadowButton" customModule="SplashWindow" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ3-88-cmn" customClass="SWShadowButton" customModule="SplashWindow" customModuleProvider="target">
                                 <rect key="frame" x="222.5" y="279" width="110" height="110"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" image="logout">
@@ -39,7 +39,7 @@
                                     <action selector="didClickLogoutBtn:" destination="ubB-of-Gu5" eventType="touchUpInside" id="Vzc-aH-7CX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPy-g1-sYa" customClass="ShadowButton" customModule="SplashWindow" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPy-g1-sYa" customClass="SWShadowButton" customModule="SplashWindow" customModuleProvider="target">
                                 <rect key="frame" x="42.5" y="279" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iPy-g1-sYa" secondAttribute="height" multiplier="1:1" id="4Z0-Rw-GS9"/>

@@ -7,21 +7,26 @@ import ZHExtensions
 public class AppAuthentication {
     
     //MARK: static vars
-    public static let storage: Storage = UserDefaults.standard
+    private static let storage: Storage = UserDefaults.standard
     
+    
+    /// Whether your touchID or passcode is on
     public static var authEnabled: Bool {
         return passcodeEnabled || touchIDEnabled
     }
     
+    /// Whether your passcode is on
     public static var passcodeEnabled: Bool {
         //fix this if you set your own passcodeView
         return false //storage.passcodeEnabled()
     }
     
+    /// Whether your device supports touchID
     public static var touchIDEnabledOnDevice: Bool {
         return LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil)
     }
     
+    /// Whether your touchID is on
     public static var touchIDEnabled: Bool {
         let deviceTouchIDEnabled = self.touchIDEnabledOnDevice
         guard deviceTouchIDEnabled else { return false }
@@ -34,10 +39,13 @@ public class AppAuthentication {
     }
     
     //MARK: Setters
+    
+    /// Set passcode by a string (passcodeView not implemented)
     public class func setPasscode(passcode: String) {
         storage.setPasscode(passcode)
     }
     
+    /// Turn on or off touchID in your app
     public class func setTouchID(enabled: Bool) {
         storage.setTouchID(enabled)
     }
@@ -59,6 +67,10 @@ public class AppAuthentication {
                 handler(success, error as NSError?)
             })
         }
+    }
+    
+    public class func cleanupAllSettings() {
+        storage.removeAllInfo()
     }
 }
 

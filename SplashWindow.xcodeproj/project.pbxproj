@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		410E789F1EB58F9C0038953B /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E789D1EB58F9C0038953B /* ShadowButton.swift */; };
-		410E78A01EB58F9C0038953B /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E789E1EB58F9C0038953B /* ShadowView.swift */; };
 		415E56741EB589C900BD2D5B /* SplashWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415E566A1EB589C900BD2D5B /* SplashWindow.framework */; };
 		415E56791EB589C900BD2D5B /* SplashWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56781EB589C900BD2D5B /* SplashWindowTests.swift */; };
 		415E567B1EB589C900BD2D5B /* SplashWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 415E566D1EB589C900BD2D5B /* SplashWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +16,8 @@
 		415E56B71EB58AFD00BD2D5B /* SplashWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56A91EB58AFD00BD2D5B /* SplashWindow.swift */; };
 		415E56B81EB58AFD00BD2D5B /* AuthStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */; };
 		415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */; };
+		41C3066D1EBC0F2E0051C98F /* SWShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C3066B1EBC0F2E0051C98F /* SWShadowButton.swift */; };
+		41C3066E1EBC0F2E0051C98F /* SWShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C3066C1EBC0F2E0051C98F /* SWShadowView.swift */; };
 		41D5AB2B1EB5993300F8779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AB2A1EB5993300F8779E /* Assets.xcassets */; };
 		41D5AB911EB6AAE500F8779E /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D5AB8F1EB6AAD600F8779E /* ZHExtensions.framework */; };
 /* End PBXBuildFile section */
@@ -47,8 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		410E789D1EB58F9C0038953B /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
-		410E789E1EB58F9C0038953B /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		415E566A1EB589C900BD2D5B /* SplashWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplashWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		415E566D1EB589C900BD2D5B /* SplashWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashWindow.h; sourceTree = "<group>"; };
 		415E566E1EB589C900BD2D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		415E56A91EB58AFD00BD2D5B /* SplashWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashWindow.swift; sourceTree = "<group>"; };
 		415E56AB1EB58AFD00BD2D5B /* AuthStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStrings.swift; sourceTree = "<group>"; };
 		415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViews.swift; sourceTree = "<group>"; };
+		41C3066B1EBC0F2E0051C98F /* SWShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWShadowButton.swift; sourceTree = "<group>"; };
+		41C3066C1EBC0F2E0051C98F /* SWShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWShadowView.swift; sourceTree = "<group>"; };
 		41D5AB2A1EB5993300F8779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41D5AB791EB6AA8000F8779E /* ZHExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZHExtensions.xcodeproj; path = ZHExtensions/ZHExtensions/ZHExtensions.xcodeproj; sourceTree = "<group>"; };
 		41D5AB8F1EB6AAD600F8779E /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZHExtensions.framework; path = "../../../Library/Developer/Xcode/DerivedData/SplashWindow-deflilppwdbhxifpgbyehvrsgcyq/Build/Products/Debug-iphoneos/ZHExtensions.framework"; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 		410E789C1EB58F9C0038953B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				410E789D1EB58F9C0038953B /* ShadowButton.swift */,
-				410E789E1EB58F9C0038953B /* ShadowView.swift */,
+				41C3066B1EBC0F2E0051C98F /* SWShadowButton.swift */,
+				41C3066C1EBC0F2E0051C98F /* SWShadowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,11 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				415E56B71EB58AFD00BD2D5B /* SplashWindow.swift in Sources */,
+				41C3066E1EBC0F2E0051C98F /* SWShadowView.swift in Sources */,
 				415E56B81EB58AFD00BD2D5B /* AuthStrings.swift in Sources */,
 				415E56B51EB58AFD00BD2D5B /* OptionsViewController.swift in Sources */,
+				41C3066D1EBC0F2E0051C98F /* SWShadowButton.swift in Sources */,
 				415E56B41EB58AFD00BD2D5B /* AppAuthentication.swift in Sources */,
-				410E789F1EB58F9C0038953B /* ShadowButton.swift in Sources */,
-				410E78A01EB58F9C0038953B /* ShadowView.swift in Sources */,
 				415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

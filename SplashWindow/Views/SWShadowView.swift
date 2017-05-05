@@ -1,7 +1,7 @@
 
 import UIKit
 
-public class ShadowView: UIView {
+public class SWShadowView: UIView {
     
     @IBInspectable var cornerRadius: CGFloat = 4.0 {
         didSet {

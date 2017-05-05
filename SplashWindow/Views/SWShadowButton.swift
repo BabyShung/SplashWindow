@@ -1,7 +1,7 @@
 
 import UIKit
 
-public class ShadowButton: UIButton {
+public class SWShadowButton: UIButton {
     
     @IBInspectable var cornerRadius: CGFloat = 4.0 {
         didSet {
@@ -67,7 +67,7 @@ public class ShadowButton: UIButton {
     }
 }
 
-extension ShadowButton {
+extension SWShadowButton {
     
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)

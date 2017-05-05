@@ -180,7 +180,7 @@ extension SplashWindow {
         self.isAuthenticating = false
         self.initialVC = nil
         
-        AppAuthentication.storage.removeAllInfo()
+        AppAuthentication.cleanupAllSettings()
 
         //if we have a logout closure
         if let loginVC = self.logoutClosure() {
