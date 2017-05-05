@@ -131,10 +131,10 @@ public extension SplashWindow {
 extension SplashWindow {
     
     fileprivate func showPasscodeTouchIDIfNeeded() {
-        guard AppAuthentication.authEnabled else { return }
+        guard AppAuthentication.shared.authEnabled else { return }
         showSelf(show: true, animated: false)
         isAuthenticating = true
-        AppAuthentication.touchIDEnabled ? showTouchID() : showOptionView()
+        AppAuthentication.shared.touchIDEnabled ? showTouchID() : showOptionView()
     }
     
     fileprivate func authenticationSucceeded(type: AuthType) {
@@ -157,7 +157,7 @@ extension SplashWindow {
     }
     
     fileprivate func showTouchID() {
-        AppAuthentication.authenticateUser { [unowned self] (success, error) in
+        AppAuthentication.shared.authenticateUser { [unowned self] (success, error) in
             if success {
                 self.authenticationSucceeded(type: .touchID)
                 return
@@ -180,7 +180,7 @@ extension SplashWindow {
         self.isAuthenticating = false
         self.initialVC = nil
         
-        AppAuthentication.cleanupAllSettings()
+        AppAuthentication.shared.cleanupAllSettings()
 
         //if we have a logout closure
         if let loginVC = self.logoutClosure() {

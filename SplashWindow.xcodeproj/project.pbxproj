@@ -18,6 +18,7 @@
 		415E56B91EB58AFD00BD2D5B /* AlertViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */; };
 		41C3066D1EBC0F2E0051C98F /* SWShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C3066B1EBC0F2E0051C98F /* SWShadowButton.swift */; };
 		41C3066E1EBC0F2E0051C98F /* SWShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C3066C1EBC0F2E0051C98F /* SWShadowView.swift */; };
+		41C306701EBC13380051C98F /* AppAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C3066F1EBC13380051C98F /* AppAuthenticationTests.swift */; };
 		41D5AB2B1EB5993300F8779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AB2A1EB5993300F8779E /* Assets.xcassets */; };
 		41D5AB911EB6AAE500F8779E /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D5AB8F1EB6AAD600F8779E /* ZHExtensions.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		415E56AD1EB58AFD00BD2D5B /* AlertViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViews.swift; sourceTree = "<group>"; };
 		41C3066B1EBC0F2E0051C98F /* SWShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWShadowButton.swift; sourceTree = "<group>"; };
 		41C3066C1EBC0F2E0051C98F /* SWShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWShadowView.swift; sourceTree = "<group>"; };
+		41C3066F1EBC13380051C98F /* AppAuthenticationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAuthenticationTests.swift; sourceTree = "<group>"; };
 		41D5AB2A1EB5993300F8779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41D5AB791EB6AA8000F8779E /* ZHExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZHExtensions.xcodeproj; path = ZHExtensions/ZHExtensions/ZHExtensions.xcodeproj; sourceTree = "<group>"; };
 		41D5AB8F1EB6AAD600F8779E /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZHExtensions.framework; path = "../../../Library/Developer/Xcode/DerivedData/SplashWindow-deflilppwdbhxifpgbyehvrsgcyq/Build/Products/Debug-iphoneos/ZHExtensions.framework"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				415E56781EB589C900BD2D5B /* SplashWindowTests.swift */,
+				41C3066F1EBC13380051C98F /* AppAuthenticationTests.swift */,
 				415E567A1EB589C900BD2D5B /* Info.plist */,
 			);
 			path = SplashWindowTests;
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				415E56791EB589C900BD2D5B /* SplashWindowTests.swift in Sources */,
+				41C306701EBC13380051C98F /* AppAuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

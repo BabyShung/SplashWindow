@@ -17,8 +17,8 @@ class AuthFlowController {
         let section1 = [AuthSettingsItem.touchID(
             AuthTableRow(authVC,
                          AuthStrings.enableTouchID,
-                         AppAuthentication.touchIDEnabled,
-                         AppAuthentication.touchIDEnabledOnDevice))]
+                         AppAuthentication.shared.touchIDEnabled,
+                         AppAuthentication.shared.touchIDEnabledOnDevice))]
         let section1Header = AuthStrings.touchID
         
         //section2

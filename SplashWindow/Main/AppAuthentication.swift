@@ -6,33 +6,36 @@ import ZHExtensions
 
 public class AppAuthentication {
     
-    //MARK: static vars
-    private static let storage: Storage = UserDefaults.standard
+    public static let shared = AppAuthentication()
     
+    //MARK: static vars
+    public var storage: SWStorage {
+        return UserDefaults.standard
+    }
     
     /// Whether your touchID or passcode is on
-    public static var authEnabled: Bool {
+    public var authEnabled: Bool {
         return passcodeEnabled || touchIDEnabled
     }
     
     /// Whether your passcode is on
-    public static var passcodeEnabled: Bool {
+    public var passcodeEnabled: Bool {
         //fix this if you set your own passcodeView
         return false //storage.passcodeEnabled()
     }
     
     /// Whether your device supports touchID
-    public static var touchIDEnabledOnDevice: Bool {
+    public var touchIDEnabledOnDevice: Bool {
         return LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil)
     }
     
     /// Whether your touchID is on
-    public static var touchIDEnabled: Bool {
+    public var touchIDEnabled: Bool {
         let deviceTouchIDEnabled = self.touchIDEnabledOnDevice
         guard deviceTouchIDEnabled else { return false }
         
         //turn on touchID by default if device supports touchID
-        if storage.getTouchIDEnabled() == nil {
+        if storage.touchIDObjectInStorage() == nil {
             storage.setTouchID(true)
         }
         return storage.touchIDEnabled() && deviceTouchIDEnabled
@@ -41,17 +44,17 @@ public class AppAuthentication {
     //MARK: Setters
     
     /// Set passcode by a string (passcodeView not implemented)
-    public class func setPasscode(passcode: String) {
+    public func setPasscode(passcode: String) {
         storage.setPasscode(passcode)
     }
     
     /// Turn on or off touchID in your app
-    public class func setTouchID(enabled: Bool) {
+    public func setTouchID(enabled: Bool) {
         storage.setTouchID(enabled)
     }
     
     //MARK: authenticate
-    public class func authenticateUser(handler: @escaping (Bool, NSError?) -> ()) {
+    public func authenticateUser(handler: @escaping (Bool, NSError?) -> ()) {
         let context = LAContext()
         var error: NSError?
         guard context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
@@ -69,7 +72,7 @@ public class AppAuthentication {
         }
     }
     
-    public class func cleanupAllSettings() {
+    public func cleanupAllSettings() {
         storage.removeAllInfo()
     }
 }
@@ -77,16 +80,16 @@ public class AppAuthentication {
 /*
  Lower level of AppAuthentication
  */
-public protocol Storage {
+public protocol SWStorage {
     func passcodeEnabled() -> Bool
     func setPasscode(_ passcode: String)
     func touchIDEnabled() -> Bool
-    func getTouchIDEnabled() -> Bool?
+    func touchIDObjectInStorage() -> Bool?
     func setTouchID(_ enable: Bool)
     func removeAllInfo()
 }
 
-extension UserDefaults: Storage {
+extension UserDefaults: SWStorage {
     
     public func passcodeEnabled() -> Bool {
         return Defaults[.passcode] != nil
@@ -97,11 +100,11 @@ extension UserDefaults: Storage {
     }
     
     public func touchIDEnabled() -> Bool {
-        guard let enabled = getTouchIDEnabled() else { return false }
+        guard let enabled = touchIDObjectInStorage() else { return false }
         return enabled
     }
     
-    public func getTouchIDEnabled() -> Bool? {
+    public func touchIDObjectInStorage() -> Bool? {
         return Defaults[.touchIDEnabled]
     }
     

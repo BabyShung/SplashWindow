@@ -15,6 +15,6 @@ class AuthSettingsViewController: GenericTableViewController<AuthSettingsItem> {
 extension AuthSettingsViewController: SharedSwitchTableViewCellDelegate {
     func didToggleSwitch(_ sender: AnyObject) {
         let switchControl = sender as! UISwitch
-        AppAuthentication.setTouchID(enabled: switchControl.isOn)
+        AppAuthentication.shared.setTouchID(enabled: switchControl.isOn)
     }
 }

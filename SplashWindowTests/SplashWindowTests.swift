@@ -2,7 +2,7 @@
 //  SplashWindowTests.swift
 //  SplashWindowTests
 //
-//  Created by Hoa Zheng on 4/29/17.
+//  Created by Hao Zheng on 4/29/17.
 //  Copyright © 2017 Hao Zheng. All rights reserved.
 //
 
@@ -25,12 +25,5 @@ class SplashWindowTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
+
