@@ -9,12 +9,13 @@ public class AppAuthentication {
     public static let shared = AppAuthentication()
     
     //MARK: vars
+    /// Whether touchID should be on by default. Default is on
+    fileprivate var touchIDShouldTurnOn: Bool = true
+    
+    /// UserDefault for storing touchID value on the client
     public var storage: SWStorage {
         return UserDefaults.standard
     }
-    
-    /// Whether touchID should be on by default. Default is on
-    public var touchIDShouldTurnOn: Bool = true
     
     /// TouchID Message in the alert
     public var touchIDMessage: String = AuthStrings.authenticateDesc
