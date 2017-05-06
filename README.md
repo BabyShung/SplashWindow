@@ -39,7 +39,7 @@ There is a "Demo" folder in the repo. You will find three targets, two of them a
 
 
 ## Warnings (Please read)
-- iOS8+
+- Framework supports iOS8+
 - The framework **doesn't** contain a authentication settings page. There is a **"Demo" project** in the repo showing the authSettings view controller for reference. Definitely you can create your own settings view controller and just call APIs in **AppAuthentication** to turn on/off touchID
 - The **only** authentication for now is **touchID** and passcode view is not implemented for simplicity
 - **By default**, touchID is **turned on** once you integrate this framework
