@@ -184,7 +184,6 @@ SWIFT_CLASS("_TtC12SplashWindow12SWShadowView")
 
 SWIFT_CLASS("_TtC12SplashWindow12SplashWindow")
 @interface SplashWindow : UIWindow
-@property (nonatomic, copy) NSString * _Nonnull touchIDMessage;
 @property (nonatomic, strong) UIImage * _Nullable touchIDBtnImage;
 @property (nonatomic, strong) UIImage * _Nullable logoutBtnImage;
 /// Closure when clicked logout btn. Expecting a returned loginVC for transition
