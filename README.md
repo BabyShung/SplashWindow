@@ -2,14 +2,14 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## About
-This is an **UIWindow-based** touchID authentication view control written in Swift.
+This is an **UIWindow-based** touchID authentication view **framework** written in **Swift**.
 
 *Framework is designed for:*
 - *You want a relatively decoupled touchID framework (Only couple with your AppDelegate and your SettingsVC)*
 - *Your app is **information-sensitive** and you want **touchID automaticlly on** (A device supports and has **touchID** on)*
 
 
-
+## Screenshots
 <div>
 <kbd>
 <img src="https://cloud.githubusercontent.com/assets/4360870/25762430/a39135e2-31ac-11e7-968b-06d82280bee9.gif" width="200">
@@ -37,7 +37,6 @@ This is an **UIWindow-based** touchID authentication view control written in Swi
 
 There is a "Demo" folder in the repo. You will find three targets, two of them are the needed frameworks. Just run the project and you can drag both SplashWindow.framework and ZHExtension.framework to your "Linked Frameworks and Libraries".
 
-Make sure "Always Embed Swift Standard Libraries" in "Build Settings" is set to Yes.
 
 ## Warnings (Please read)
 - iOS8+
@@ -45,6 +44,7 @@ Make sure "Always Embed Swift Standard Libraries" in "Build Settings" is set to 
 - The **only** authentication for now is **touchID** and passcode view is not implemented for simplicity
 - **By default**, touchID is **turned on** once you integrate this framework
 - Sometimes after you've set the launchScreen image in your storyboard or xib, the splash screen is showing a blank view when running. This is a cache issue. To fix it, clean your project. If it still doesn't work, reboot your device or reset your similator.
+- Make sure "Always Embed Swift Standard Libraries" in "Build Settings" is set to Yes.
 
 ## Import and setup in your project
 Once you've added the framework in your project, just go to AppDelegate.swift and do a few steps.
