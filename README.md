@@ -18,16 +18,16 @@ This is an UIWindow-based touchID authentication view control written in Swift.
 ## Integrate framework
 
 #### 1. **[Carthage](https://github.com/Carthage/Carthage)** - Just follow Carthage configure steps.
-1.install carthage 
+- install carthage 
 
-2.create Cartfile (touch Cartfile)
+- create Cartfile (touch Cartfile)
 
-3.add framework in Cartfile
+- add framework in Cartfile
 > github "BabyShung/SplashWindow"
 
-4.run "carthage update"
+- run "carthage update"
 
-5.bind frameworks in your project (add a shell script in build phase and bind the paths of frameworks)
+- bind frameworks in your project (add a shell script in build phase and bind the paths of frameworks)
 
 #### 2. Manually 
 
