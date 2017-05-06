@@ -29,13 +29,99 @@ This is an UIWindow-based touchID authentication view control written in Swift.
 
 - bind frameworks in your project (add a shell script in build phase and bind the paths of frameworks)
 
-#### 2. Manually 
-
-## How to configure:
+#### 2. Manually configure
 
 There is a "Demo" folder in the repo. You will find three targets, two of them are the needed frameworks. Just run the project and you can drag both SplashWindow.framework and ZHExtension.framework to your "Linked Frameworks and Libraries".
 
 1.Make sure "Always Embed Swift Standard Libraries" in "Build Settings" is set to Yes
+
+## import and setup in your project
+Once you've added the framework in your project, just go to AppDelegate.swift and do a few steps.
+- import SplashWindow
+- declare a SplashWindow property and pass your window, launchVC etc
+- in didFinishLaunchingWithOptions, setup your initial view controller and call SplashWindow API
+- in applicationWillResignActive, call showSplashView()
+- in applicationDidEnterBackground, call enteredBackground()
+- in applicationDidBecomeActive, call authenticateUser
+
+**There is a "Demo" project in the folder where everything is setup in AppDelegate**
+**Also there are some comments explaining what to do in your AppDelegate (I also attach the code below):**
+**Once you've configured your AppDelegate, touchID will work.**
+
+~~~~
+import UIKit
+import SplashWindow
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
+    lazy var splashWindow: SplashWindow = {
+        let identifier = "LaunchScreen"
+        let vc = UIStoryboard.named(identifier, vc: identifier)
+        let splashWindow = SplashWindow.init(window: self.window!, launchViewController: vc)
+        
+        /** Customization - otherwise default
+         
+         splashWindow.touchIDMessage = "YOUR MESSAGE"
+         
+         splashWindow.touchIDBtnImage = UIImage(named: "user.png")
+         
+         splashWindow.logoutBtnImage = UIImage(named: "user.png")
+         
+         */
+        
+        //Auth succeeded closure
+        splashWindow.authSucceededClosure = { _ in }
+        
+        //Return a loginVC after clicking logout
+        splashWindow.logoutClosure = { _ in
+            return UIStoryboard.named("Login", vc: "LoginViewController")
+        }
+        return splashWindow
+    }()
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let initialVC = UINavigationController(rootViewController: AuthFlowController().authSettingVC)
+        /*
+         Use your logic to determine whether your app is loggedIn
+         initialVC can be any of your viewController, but must make sure if it's loggedIn when showing this VC
+         */
+        splashWindow.authenticateUser(isLoggedIn: true, initialVC: initialVC)
+        
+        return true
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        
+        splashWindow.showSplashView()
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        
+        splashWindow.enteredBackground()
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        /*
+         Use your logic to determine whether your app is loggedIn
+         
+         If you already have some code here in didBecome such as refreshing
+         network request or load data from database, if you want to bypass
+         these actions before authentication, use self.splashWindow.isAuthenticating:
+         
+         splashWindow.authenticateUser(isLoggedIn: true)
+         guard !splashWindow.isAuthenticating { return }
+         */
+        
+        let rootIsLoginVC = window?.rootViewController is LoginViewController
+        splashWindow.authenticateUser(isLoggedIn: !rootIsLoginVC)
+    }
+}
+~~~~
 
 ## Warnings
 - iOS8+
