@@ -21,6 +21,10 @@ This is an **UIWindow-based** touchID authentication view **framework** written 
 
 ## Integrate framework
 
+<kbd>
+<img src="https://cloud.githubusercontent.com/assets/4360870/25774091/56166732-3257-11e7-9923-0d05c47bb385.png" width="250">
+</kbd>
+
 #### 1. **[Carthage](https://github.com/Carthage/Carthage)** - **github "BabyShung/SplashWindow"**
 - install carthage 
 
@@ -32,6 +36,8 @@ This is an **UIWindow-based** touchID authentication view **framework** written 
 - run "carthage update"
 
 - bind frameworks in your project (add a shell script in build phase and bind the paths of frameworks)
+
+**There is another example project using Carthage to import the framework: [https://github.com/BabyShung/UsingZHFrameworks](https://github.com/BabyShung/UsingZHFrameworks)**
 
 #### 2. Manually configure
 
@@ -134,4 +140,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ~~~~
 
+## TODO
+- Fixed some small UI issues
+- Add more unit tests
+- Refactor some of the code
 
