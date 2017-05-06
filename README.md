@@ -1,5 +1,7 @@
 # SplashWindow
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)
+[![Platform](https://img.shields.io/cocoapods/p/Typist.svg?style=flat)](https://github.com/gabek/GitYourFeedback)
 
 ## About
 This is an **UIWindow-based** touchID authentication view **framework** written in **Swift**.
