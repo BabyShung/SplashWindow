@@ -2,9 +2,11 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## About
-This is an UIWindow-based touchID authentication view control written in Swift.
+This is an **UIWindow-based** touchID authentication view control written in Swift.
 
-
+*Framework is designed for:*
+- *You want a relatively decoupled touchID framework (Only couple with your AppDelegate and your SettingsVC)*
+- *Your app is **information-sensitive** and you want **touchID automaticlly on** (A device supports and has **touchID** on)*
 
 <div>
 <kbd>
@@ -33,9 +35,16 @@ This is an UIWindow-based touchID authentication view control written in Swift.
 
 There is a "Demo" folder in the repo. You will find three targets, two of them are the needed frameworks. Just run the project and you can drag both SplashWindow.framework and ZHExtension.framework to your "Linked Frameworks and Libraries".
 
-1.Make sure "Always Embed Swift Standard Libraries" in "Build Settings" is set to Yes
+Make sure "Always Embed Swift Standard Libraries" in "Build Settings" is set to Yes.
 
-## import and setup in your project
+## Warnings (Please read)
+- iOS8+
+- The framework **doesn't** contain a authentication settings page. There is a **"Demo" project** in the repo showing the authSettings view controller for reference. Definitely you can create your own settings view controller and just call APIs in **AppAuthentication** to turn on/off touchID
+- The **only** authentication for now is **touchID** and passcode view is not implemented for simplicity
+- **By default**, touchID is **turned on** once you integrate this framework
+- Sometimes after you've set the launchScreen image in your storyboard or xib, the splash screen is showing a blank view when running. This is a cache issue. To fix it, clean your project. If it still doesn't work, reboot your device or reset your similator.
+
+## Import and setup in your project
 Once you've added the framework in your project, just go to AppDelegate.swift and do a few steps.
 - import SplashWindow
 - declare a SplashWindow property and pass your window, launchVC etc
@@ -123,6 +132,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ~~~~
 
-## Warnings
-- iOS8+
-- Sometimes after you've set the launchScreen image in your storyboard or xib, the splash screen is showing a blank view when running. This is a cache issue. To fix it, clean your project. If it still doesn't work, reboot your device or reset your similator.
+
