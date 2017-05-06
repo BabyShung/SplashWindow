@@ -150,31 +150,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SplashWindow.SplashWindow.(cleanup in _71B6A69916513841853179F208DDB2D8) () -&gt; ()"
+                  symbolName = "SplashWindow.SplashWindow.(reset in _71B6A69916513841853179F208DDB2D8) () -&gt; ()"
                   moduleName = "SplashWindow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindow/Main/SplashWindow.swift"
-                  timestampString = "515718702.950795"
+                  timestampString = "515770712.383618"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "211"
-                  endingLineNumber = "211"
-                  offsetFromSymbolStart = "169">
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "220">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SplashWindow.SplashWindow.((cleanup in _71B6A69916513841853179F208DDB2D8) () -&gt; ()).(closure #1)"
+                  symbolName = "SplashWindow.SplashWindow.((reset in _71B6A69916513841853179F208DDB2D8) () -&gt; ()).(closure #1)"
                   moduleName = "SplashWindow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindow/Main/SplashWindow.swift"
-                  timestampString = "515718702.953208"
+                  timestampString = "515770712.385203"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "211"
-                  endingLineNumber = "211"
-                  offsetFromSymbolStart = "23">
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -193,38 +193,6 @@
             endingLineNumber = "22"
             landmarkName = "SplashWindowTests"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SplashWindowTests.SplashWindowTests.testInitializers () -&gt; ()"
-                  moduleName = "SplashWindowTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindowTests/SplashWindowTests.swift"
-                  timestampString = "515718702.941529"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "2383">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SplashWindowTests.SplashWindowTests.(testInitializers () -&gt; ()).(implicit closure #2)"
-                  moduleName = "SplashWindowTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hoazheng/Desktop/project2017/SplashWindow/SplashWindowTests/SplashWindowTests.swift"
-                  timestampString = "515718702.942928"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

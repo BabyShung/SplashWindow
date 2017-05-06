@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		418D62211EBD45E200637DBB /* SplashWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418D621F1EBD45E200637DBB /* SplashWindow.framework */; };
-		418D62221EBD45E200637DBB /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418D62201EBD45E200637DBB /* ZHExtensions.framework */; };
+		416FE32E1EBE094200E03920 /* SplashWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416FE32C1EBE094200E03920 /* SplashWindow.framework */; };
+		416FE32F1EBE094200E03920 /* SplashWindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 416FE32C1EBE094200E03920 /* SplashWindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		416FE3301EBE094200E03920 /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416FE32D1EBE094200E03920 /* ZHExtensions.framework */; };
+		416FE3311EBE094200E03920 /* ZHExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 416FE32D1EBE094200E03920 /* ZHExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		41D5AC251EB6B85300F8779E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AC231EB6B85300F8779E /* Main.storyboard */; };
 		41D5AC271EB6B85300F8779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AC261EB6B85300F8779E /* Assets.xcassets */; };
 		41D5AC2A1EB6B85300F8779E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D5AC281EB6B85300F8779E /* LaunchScreen.storyboard */; };
@@ -63,6 +65,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				416FE3311EBE094200E03920 /* ZHExtensions.framework in Embed Frameworks */,
+				416FE32F1EBE094200E03920 /* SplashWindow.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,9 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		416FE32C1EBE094200E03920 /* SplashWindow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SplashWindow.framework; sourceTree = "<group>"; };
+		416FE32D1EBE094200E03920 /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZHExtensions.framework; sourceTree = "<group>"; };
 		4182B8F51EB97DDA004D1511 /* SplashWindow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SplashWindow.xcodeproj; path = ../SplashWindow.xcodeproj; sourceTree = "<group>"; };
-		418D621F1EBD45E200637DBB /* SplashWindow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplashWindow.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-fjrvljijcbllovghlwtgwsutlnrm/Build/Products/Debug-iphonesimulator/SplashWindow.framework"; sourceTree = "<group>"; };
-		418D62201EBD45E200637DBB /* ZHExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZHExtensions.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-fjrvljijcbllovghlwtgwsutlnrm/Build/Products/Debug-iphonesimulator/ZHExtensions.framework"; sourceTree = "<group>"; };
 		41D5AC1C1EB6B85300F8779E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D5AC241EB6B85300F8779E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41D5AC261EB6B85300F8779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,8 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418D62211EBD45E200637DBB /* SplashWindow.framework in Frameworks */,
-				418D62221EBD45E200637DBB /* ZHExtensions.framework in Frameworks */,
+				416FE3301EBE094200E03920 /* ZHExtensions.framework in Frameworks */,
+				416FE32E1EBE094200E03920 /* SplashWindow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +129,8 @@
 		4182B8F21EB96F5D004D1511 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				418D621F1EBD45E200637DBB /* SplashWindow.framework */,
-				418D62201EBD45E200637DBB /* ZHExtensions.framework */,
+				416FE32C1EBE094200E03920 /* SplashWindow.framework */,
+				416FE32D1EBE094200E03920 /* ZHExtensions.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

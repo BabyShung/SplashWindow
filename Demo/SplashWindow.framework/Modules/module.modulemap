@@ -1,0 +1,10 @@
+framework module SplashWindow {
+  umbrella header "SplashWindow.h"
+
+  export *
+  module * { export * }
+}
+
+module SplashWindow.Swift {
+    header "SplashWindow-Swift.h"
+}
