@@ -74,7 +74,7 @@ Once you've added the framework in your project, just go to AppDelegate.swift an
 
 **Once you've configured your AppDelegate, touchID should work.**
 
-~~~~
+``` swift
 import UIKit
 import SplashWindow
 
@@ -144,7 +144,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashWindow.authenticateUser(isLoggedIn: !rootIsLoginVC)
     }
 }
-~~~~
+``` swift
 
 ## TODO
 - Fixed some small UI issues
