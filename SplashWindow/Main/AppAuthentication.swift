@@ -9,6 +9,10 @@ public class AppAuthentication {
     public static let shared = AppAuthentication()
     
     //MARK: vars
+    /// Whether touchID should be on by default. Default is on
+    fileprivate var touchIDShouldTurnOn: Bool = true
+    
+    /// UserDefault for storing touchID value on the client
     public var storage: SWStorage {
         return UserDefaults.standard
     }
@@ -39,13 +43,12 @@ public class AppAuthentication {
         
         //turn on touchID by default if device supports touchID
         if storage.touchIDObjectInStorage() == nil {
-            storage.setTouchID(true)
+            storage.setTouchID(touchIDShouldTurnOn)
         }
         return storage.touchIDEnabled() && deviceTouchIDEnabled
     }
     
     //MARK: Setters
-    
     /// Set passcode by a string (passcodeView not implemented)
     public func setPasscode(passcode: String) {
         storage.setPasscode(passcode)

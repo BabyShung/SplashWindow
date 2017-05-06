@@ -1,0 +1,10 @@
+framework module ZHExtensions {
+  umbrella header "ZHExtensions.h"
+
+  export *
+  module * { export * }
+}
+
+module ZHExtensions.Swift {
+    header "ZHExtensions-Swift.h"
+}
