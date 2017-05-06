@@ -144,7 +144,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashWindow.authenticateUser(isLoggedIn: !rootIsLoginVC)
     }
 }
-``` swift
+```
 
 ## TODO
 - Fixed some small UI issues
