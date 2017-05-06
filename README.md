@@ -8,6 +8,8 @@ This is an **UIWindow-based** touchID authentication view control written in Swi
 - *You want a relatively decoupled touchID framework (Only couple with your AppDelegate and your SettingsVC)*
 - *Your app is **information-sensitive** and you want **touchID automaticlly on** (A device supports and has **touchID** on)*
 
+
+
 <div>
 <kbd>
 <img src="https://cloud.githubusercontent.com/assets/4360870/25762430/a39135e2-31ac-11e7-968b-06d82280bee9.gif" width="200">
@@ -53,6 +55,7 @@ Once you've added the framework in your project, just go to AppDelegate.swift an
 - in applicationDidEnterBackground, call enteredBackground()
 - in applicationDidBecomeActive, call authenticateUser
 
+## Demo project
 **There is a "Demo" project in the folder where everything is setup in AppDelegate**
 
 **Comments are there explaining what to configure in AppDelegate (I also attach the code below):**
