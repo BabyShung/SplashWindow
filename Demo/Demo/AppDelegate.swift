@@ -21,12 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /** Customization - otherwise default
          
-            splashWindow.touchIDMessage = "YOUR MESSAGE"
+            AppAuthentication.shared.touchIDMessage = "YOUR MESSAGE"
+            AppAuthentication.shared.touchIDShouldTurnOn = true
          
             splashWindow.touchIDBtnImage = UIImage(named: "user.png")
-         
             splashWindow.logoutBtnImage = UIImage(named: "user.png")
-         
          */
         
         //Auth succeeded closure
@@ -66,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /*
          Use your logic to determine whether your app is loggedIn
          
-         If you already have some code here in didBecome such as refreshing
+         If you already have some code here in didBecomeActive such as refreshing
          network request or load data from database, if you want to bypass
          these actions before authentication, use self.splashWindow.isAuthenticating:
          
