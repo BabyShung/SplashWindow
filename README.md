@@ -60,6 +60,10 @@ Once you've added the framework in your project, just go to AppDelegate.swift an
 - in applicationWillResignActive, call showSplashView()
 - in applicationDidEnterBackground, call enteredBackground()
 - in applicationDidBecomeActive, call authenticateUser
+- go to your launchScreen.storyboard or launchScreen.xib and set your image:
+<kbd>
+<img src="https://cloud.githubusercontent.com/assets/4360870/25774477/45313630-325d-11e7-9941-4ad4545778b7.png" width="800">
+</kbd>
 
 ## Demo project
 **There is a "Demo" project in the folder where everything is setup in AppDelegate**
