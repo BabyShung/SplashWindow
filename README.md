@@ -21,6 +21,10 @@ This is an **UIWindow-based** touchID authentication view **framework** written 
 
 ## Integrate framework
 
+<kbd>
+<img src="https://cloud.githubusercontent.com/assets/4360870/25774091/56166732-3257-11e7-9923-0d05c47bb385.png" width="250">
+</kbd>
+
 #### 1. **[Carthage](https://github.com/Carthage/Carthage)** - **github "BabyShung/SplashWindow"**
 - install carthage 
 
