@@ -54,7 +54,9 @@ Once you've added the framework in your project, just go to AppDelegate.swift an
 - in applicationDidBecomeActive, call authenticateUser
 
 **There is a "Demo" project in the folder where everything is setup in AppDelegate**
-**Also there are some comments explaining what to do in your AppDelegate (I also attach the code below):**
+
+**Comments are there explaining what to configure in AppDelegate (I also attach the code below):**
+
 **Once you've configured your AppDelegate, touchID will work.**
 
 ~~~~
