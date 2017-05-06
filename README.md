@@ -33,6 +33,8 @@ This is an **UIWindow-based** touchID authentication view **framework** written 
 
 - bind frameworks in your project (add a shell script in build phase and bind the paths of frameworks)
 
+**There is another example project using Carthage to import the framework: [https://github.com/BabyShung/UsingZHFrameworks](https://github.com/Carthage/Carthage)**
+
 #### 2. Manually configure
 
 There is a "Demo" folder in the repo. You will find three targets, two of them are the needed frameworks. Just run the project and you can drag both SplashWindow.framework and ZHExtension.framework to your "Linked Frameworks and Libraries".
