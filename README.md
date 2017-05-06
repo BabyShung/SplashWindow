@@ -79,8 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /** Customization - otherwise default
          
             AppAuthentication.shared.touchIDMessage = "YOUR MESSAGE"
-            AppAuthentication.shared.touchIDShouldTurnOn = true
-         
             splashWindow.touchIDBtnImage = UIImage(named: "user.png")
             splashWindow.logoutBtnImage = UIImage(named: "user.png")
          */
