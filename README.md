@@ -58,9 +58,9 @@ Once you've added the framework in your project, just go to AppDelegate.swift an
 ## Demo project
 **There is a "Demo" project in the folder where everything is setup in AppDelegate**
 
-**Comments are there explaining what to configure in AppDelegate (I also attach the code below):**
+**Comments are there explaining what to configure in AppDelegate (Code also attached below):**
 
-**Once you've configured your AppDelegate, touchID will work.**
+**Once you've configured your AppDelegate, touchID should work.**
 
 ~~~~
 import UIKit
