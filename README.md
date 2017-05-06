@@ -33,7 +33,7 @@ This is an **UIWindow-based** touchID authentication view **framework** written 
 
 - bind frameworks in your project (add a shell script in build phase and bind the paths of frameworks)
 
-**There is another example project using Carthage to import the framework: [https://github.com/BabyShung/UsingZHFrameworks](https://github.com/Carthage/Carthage)**
+**There is another example project using Carthage to import the framework: [https://github.com/BabyShung/UsingZHFrameworks](https://github.com/BabyShung/UsingZHFrameworks)**
 
 #### 2. Manually configure
 
