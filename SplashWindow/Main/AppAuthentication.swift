@@ -13,6 +13,9 @@ public class AppAuthentication {
         return UserDefaults.standard
     }
     
+    /// Whether touchID should be on by default. Default is on
+    public var touchIDShouldTurnOn: Bool = true
+    
     /// TouchID Message in the alert
     public var touchIDMessage: String = AuthStrings.authenticateDesc
     
@@ -39,13 +42,12 @@ public class AppAuthentication {
         
         //turn on touchID by default if device supports touchID
         if storage.touchIDObjectInStorage() == nil {
-            storage.setTouchID(true)
+            storage.setTouchID(touchIDShouldTurnOn)
         }
         return storage.touchIDEnabled() && deviceTouchIDEnabled
     }
     
     //MARK: Setters
-    
     /// Set passcode by a string (passcodeView not implemented)
     public func setPasscode(passcode: String) {
         storage.setPasscode(passcode)

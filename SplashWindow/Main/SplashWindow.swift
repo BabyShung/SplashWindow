@@ -6,12 +6,6 @@ import LocalAuthentication
 public class SplashWindow: UIWindow {
     
     /* PUBLIC */
-    public var touchIDMessage = "" {
-        didSet {
-            appAuth.touchIDMessage = touchIDMessage
-        }
-    }
-    
     public var touchIDBtnImage: UIImage? {
         didSet {
             optionVC.touchIDBtnImage = touchIDBtnImage
@@ -39,7 +33,6 @@ public class SplashWindow: UIWindow {
     /* PRIVATE */
     /// App main window
     fileprivate unowned var protectedWindow: UIWindow
-    
     
     /// Your initial view controller
     fileprivate var initialVC: UIViewController?
@@ -204,7 +197,7 @@ extension SplashWindow {
         }
     }
     
-    private func cleanup() {
+    private func reset() {
         self.isAuthenticating = false
         self.initialVC = nil
         
@@ -226,7 +219,7 @@ extension SplashWindow {
     fileprivate func showOptionView() {
         
         optionVC.didClicklogout = { [weak self] in
-            self?.cleanup()
+            self?.reset()
         }
         optionVC.didClickTouchID = { [weak self] _ in
             self?.rootViewController?.dismiss(animated: true, completion: nil)
