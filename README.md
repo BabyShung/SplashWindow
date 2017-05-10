@@ -155,7 +155,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 ## TODO
-- Fixed some small UI issues
+- Fix some small UI issues
 - Add more unit tests
 - Refactor some of the code
 
