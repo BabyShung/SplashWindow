@@ -67,8 +67,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          network request or load data from database, if you want to bypass
          these actions before authentication, use self.splashWindow.isAuthenticating:
          
-            splashWindow.authenticateUser(isLoggedIn: true)
-            guard !splashWindow.isAuthenticating { return }
+         //1. call authenticateUser first
+         splashWindow.authenticateUser(isLoggedIn: true)
+         
+         //2. if you are authenticating, here it skips YOUR NETWORK CODE or DATABASE CODE
+         guard !splashWindow.isAuthenticating else { return }
+         
+         //...
+         //YOUR NETWORK CODE or DATABASE CODE
+         //...
+         
          */
         
         let rootIsLoginVC = window?.rootViewController is LoginViewController
