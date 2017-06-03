@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4122F5B01EE3308B00F33B94 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4122F5AF1EE3308B00F33B94 /* UICollectionViewExtensions.swift */; };
+		4122F5B41EE330E100F33B94 /* UIEdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4122F5B31EE330E100F33B94 /* UIEdgeInsetsExtensions.swift */; };
+		4122F5B61EE330F500F33B94 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4122F5B51EE330F500F33B94 /* UITableViewExtensions.swift */; };
 		41C306681EBC0B510051C98F /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C306671EBC0B510051C98F /* UIViewExtensionTests.swift */; };
 		41C306721EBCDAF40051C98F /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C306711EBCDAF40051C98F /* UIWindowExtension.swift */; };
 		41D5AB691EB6AA6800F8779E /* ZHExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D5AB5F1EB6AA6800F8779E /* ZHExtensions.framework */; };
@@ -31,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4122F5AF1EE3308B00F33B94 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		4122F5B31EE330E100F33B94 /* UIEdgeInsetsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtensions.swift; sourceTree = "<group>"; };
+		4122F5B51EE330F500F33B94 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		41C306671EBC0B510051C98F /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
 		41C306711EBCDAF40051C98F /* UIWindowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
 		41D5AB5F1EB6AA6800F8779E /* ZHExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZHExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +72,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4122F5B11EE3309700F33B94 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				41D5AB621EB6AA6800F8779E /* ZHExtensions.h */,
+				41D5AB631EB6AA6800F8779E /* Info.plist */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		4122F5B21EE330B900F33B94 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41D5AB821EB6AAAA00F8779E /* NSAttributedStringExtension.swift */,
+				41D5AB841EB6AAAA00F8779E /* UIButtonExtension.swift */,
+				4122F5AF1EE3308B00F33B94 /* UICollectionViewExtensions.swift */,
+				41D5AB851EB6AAAA00F8779E /* UIColorExtension.swift */,
+				4122F5B31EE330E100F33B94 /* UIEdgeInsetsExtensions.swift */,
+				41D5AB861EB6AAAA00F8779E /* UIStoryboardExtension.swift */,
+				4122F5B51EE330F500F33B94 /* UITableViewExtensions.swift */,
+				41D5AB871EB6AAAA00F8779E /* UIViewExtension.swift */,
+				41C306711EBCDAF40051C98F /* UIWindowExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		4122F5B71EE3315D00F33B94 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				41D5AB831EB6AAAA00F8779E /* SwiftyUserDefaults.swift */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
 		41D5AB551EB6AA6800F8779E = {
 			isa = PBXGroup;
 			children = (
@@ -87,15 +126,9 @@
 		41D5AB611EB6AA6800F8779E /* ZHExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				41D5AB821EB6AAAA00F8779E /* NSAttributedStringExtension.swift */,
-				41D5AB831EB6AAAA00F8779E /* SwiftyUserDefaults.swift */,
-				41D5AB841EB6AAAA00F8779E /* UIButtonExtension.swift */,
-				41D5AB851EB6AAAA00F8779E /* UIColorExtension.swift */,
-				41D5AB861EB6AAAA00F8779E /* UIStoryboardExtension.swift */,
-				41D5AB871EB6AAAA00F8779E /* UIViewExtension.swift */,
-				41C306711EBCDAF40051C98F /* UIWindowExtension.swift */,
-				41D5AB621EB6AA6800F8779E /* ZHExtensions.h */,
-				41D5AB631EB6AA6800F8779E /* Info.plist */,
+				4122F5B71EE3315D00F33B94 /* 3rdParty */,
+				4122F5B21EE330B900F33B94 /* Extensions */,
+				4122F5B11EE3309700F33B94 /* Others */,
 			);
 			path = ZHExtensions;
 			sourceTree = "<group>";
@@ -223,13 +256,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4122F5B01EE3308B00F33B94 /* UICollectionViewExtensions.swift in Sources */,
 				41D5AB8D1EB6AAAA00F8779E /* UIViewExtension.swift in Sources */,
 				41D5AB891EB6AAAA00F8779E /* SwiftyUserDefaults.swift in Sources */,
 				41D5AB881EB6AAAA00F8779E /* NSAttributedStringExtension.swift in Sources */,
 				41C306721EBCDAF40051C98F /* UIWindowExtension.swift in Sources */,
+				4122F5B61EE330F500F33B94 /* UITableViewExtensions.swift in Sources */,
 				41D5AB8C1EB6AAAA00F8779E /* UIStoryboardExtension.swift in Sources */,
 				41D5AB8A1EB6AAAA00F8779E /* UIButtonExtension.swift in Sources */,
 				41D5AB8B1EB6AAAA00F8779E /* UIColorExtension.swift in Sources */,
+				4122F5B41EE330E100F33B94 /* UIEdgeInsetsExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
