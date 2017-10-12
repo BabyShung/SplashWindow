@@ -13,7 +13,7 @@ public extension UIView {
     public func showSelf(show: Bool, animated: Bool) {
         showSelf(show: show,
                  animated: animated,
-                 animations: { _ in },
+                 animations: {  },
                  completion: { _ in })
     }
     
@@ -21,7 +21,7 @@ public extension UIView {
     /// Root: show or hide current view
     public func showSelf(show: Bool,
                          animated: Bool,
-                         animations: @escaping () -> () = { _ in },
+                         animations: @escaping () -> () = {  },
                          completion: @escaping (Bool) -> ()) {
         guard isHidden == show else { return }
         var alpha: CGFloat

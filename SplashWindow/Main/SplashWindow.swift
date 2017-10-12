@@ -22,7 +22,7 @@ public class SplashWindow: UIWindow {
     public var authSucceededClosure: (AuthType) -> () = { _ in }
     
     /// Closure when clicked logout btn. Expecting a returned loginVC for transition
-    public var logoutClosure: () -> (UIViewController?) = { _ in return nil }
+    public var logoutClosure: () -> (UIViewController?) = {  return nil }
     
     /// True if self showing touchID/passcode, false if default or auth succeeded
     public fileprivate(set) var isAuthenticating: Bool = false
@@ -208,7 +208,7 @@ extension SplashWindow {
             //transition to loginVC
             protectedWindow.transitionRootTo(loginVC) { [unowned self] _ in
                 //hide splash window
-                self.showSelf(show: false, animated: true, animations: { _ in }) { [unowned self] _ in
+                self.showSelf(show: false, animated: true, animations: {  }) { [unowned self] _ in
                     //dismiss optionVC
                     self.rootViewController?.dismiss(animated: false, completion: nil)
                 }

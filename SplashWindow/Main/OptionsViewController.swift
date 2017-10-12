@@ -17,7 +17,7 @@ public class OptionsViewController: UIViewController {
     @IBOutlet weak var logoutBtn: UIButton!
     
     var didClickTouchID: (UIButton) -> () = { _ in }
-    var didClicklogout: () -> () = { _ in }
+    var didClicklogout: () -> () = {  }
     
     public override func viewDidLoad() {
         super.viewDidLoad()

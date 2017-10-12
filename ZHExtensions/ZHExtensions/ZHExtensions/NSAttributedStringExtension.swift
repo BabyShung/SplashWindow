@@ -15,6 +15,6 @@ public extension NSAttributedString {
         style.firstLineHeadIndent = val
         style.headIndent = val
         style.tailIndent = -val
-        return NSAttributedString(string: text, attributes: [NSParagraphStyleAttributeName: style])
+        return NSAttributedString(string: text, attributes: [NSAttributedStringKey.paragraphStyle: style])
     }
 }
