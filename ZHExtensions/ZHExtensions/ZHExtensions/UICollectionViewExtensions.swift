@@ -3,7 +3,7 @@ import UIKit
 
 public extension UICollectionView {
     
-    public func dequeue<T: UICollectionViewCell>(_ indexPath: IndexPath) -> T where T: CollectionViewCellIdentifiable {
+    public func dequeue<T: UICollectionViewCell>(_ indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.cellIdentifier, for: indexPath) as? T else {
             fatalError("Can't instantiate VC with identifier \(T.cellIdentifier) ")
         }

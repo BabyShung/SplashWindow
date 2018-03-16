@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashWindow.authSucceededClosure = { _ in }
         
         //Return a loginVC after clicking logout
-        splashWindow.logoutClosure = { _ in
+        splashWindow.logoutClosure = { 
             return UIStoryboard.named("Login", vc: "LoginViewController")
         }
         return splashWindow
