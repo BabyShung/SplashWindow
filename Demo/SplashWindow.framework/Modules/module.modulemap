@@ -7,4 +7,5 @@ framework module SplashWindow {
 
 module SplashWindow.Swift {
     header "SplashWindow-Swift.h"
+    requires objc
 }

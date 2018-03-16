@@ -3,7 +3,7 @@ import UIKit
 
 public extension UIStoryboard {
     
-    public func instantiateViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
+    public func instantiateViewController<T: UIViewController>() -> T {
         guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
             fatalError("Can't instantiate VC with identifier \(T.storyboardIdentifier) ")
         }
